@@ -1,6 +1,6 @@
 <!--
   Naveen Karthikeyan E | GitHub Profile README
-  To activate as your profile README, rename this repository to exactly: naveen-elayaraja
+  Profile README repository: naveen-elayaraja/naveen-elayaraja
 -->
 
 <div align="center">
