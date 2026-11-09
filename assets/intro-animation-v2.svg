@@ -9,7 +9,7 @@
   .msg{font:700 35px ui-monospace,monospace;fill:#f3f0e9;letter-spacing:-1px}
   .small{font:15px ui-monospace,monospace;fill:#81a0b4}
   #cigarm{transform-box:view-box;transform-origin:472px 203px;animation:raise 9s ease-in-out infinite}
-  @keyframes raise{0%,8%,31%,55%,78%,100%{transform:rotate(0)}13%,26%,60%,73%{transform:rotate(-48deg)}}
+  @keyframes raise{0%,8%,31%,55%,78%,100%{transform:rotate(0)}13%,26%,60%,73%{transform:rotate(136deg)}}
   #smoke1{animation:smoke1 9s infinite}
   #smoke2{animation:smoke2 9s infinite}
   @keyframes smoke1{0%,15%{opacity:0;transform:translateY(12px)}19%,29%{opacity:1;transform:translateY(0)}34%,100%{opacity:0}}
