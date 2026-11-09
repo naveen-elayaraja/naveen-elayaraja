@@ -1,116 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
-<title id="title">Naveen's late-night coding intro</title>
-<desc id="desc">A standing cartoon developer holds a laptop in one hand and a cigarette in the other, takes two puffs, and introduces himself with smoke-written messages while eight little rats run across the floor.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="t d">
+<title id="t">Naveen — late-night commits</title>
+<desc id="d">A flat cartoon in the style of the supplied reference: a standing young man in a grey shirt and blue trousers, turned slightly sideways, holding a closed silver MacBook with an Apple logo in one hand and a cigarette in the other. He takes two puffs; each puff reveals a message. Eight small rats run along the floor.</desc>
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111c29"/><stop offset=".58" stop-color="#090e16"/><stop offset="1" stop-color="#101923"/></linearGradient>
- <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#344b65"/><stop offset="1" stop-color="#172638"/></linearGradient>
- <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#1a3440"/><stop offset="1" stop-color="#07131a"/></linearGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="night" x2="0" y2="1"><stop stop-color="#101d29"/><stop offset="1" stop-color="#071019"/></linearGradient>
+ <linearGradient id="shirt" x2="1" y2="1"><stop stop-color="#aaa9a5"/><stop offset="1" stop-color="#777b7c"/></linearGradient>
  <style>
-  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  .msg{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:34px;fill:#e9fff1;letter-spacing:-1px}
-  .rat{fill:#8994a3;stroke:#c0c9d3;stroke-width:1.1;stroke-linejoin:round}
-  .leg{stroke:#aeb8c5;stroke-width:2.4;stroke-linecap:round;fill:none}
-  .tail{stroke:#aeb8c5;stroke-width:1.8;fill:none;stroke-linecap:round}
-  #puff1{animation:puff1 9s infinite}
-  #puff2{animation:puff2 9s infinite}
-  #smokeA{animation:smokeA 9s infinite}
-  #smokeB{animation:smokeB 9s infinite}
-
-  @keyframes puff1{0%,13%{opacity:0;transform:translate(0,8px) scale(.85)}17%,28%{opacity:1;transform:translate(0,0) scale(1)}35%,100%{opacity:0}}
-  @keyframes puff2{0%,59%{opacity:0;transform:translate(0,8px) scale(.85)}63%,75%{opacity:1;transform:translate(0,0) scale(1)}83%,100%{opacity:0}}
-  @keyframes smokeA{0%,12%{opacity:0;transform:translate(0,10px)}17%,30%{opacity:.9;transform:translate(0,-5px)}37%,100%{opacity:0}}
-  @keyframes smokeB{0%,58%{opacity:0;transform:translate(0,10px)}63%,77%{opacity:.9;transform:translate(0,-5px)}84%,100%{opacity:0}}
-  .rat1{animation:run1 5.8s linear infinite}.rat2{animation:run2 6.3s linear infinite}.rat3{animation:run3 5.4s linear infinite}.rat4{animation:run4 6.8s linear infinite}.rat5{animation:run5 5.9s linear infinite}.rat6{animation:run6 6.5s linear infinite}.rat7{animation:run7 5.6s linear infinite}.rat8{animation:run8 6.1s linear infinite}
+  .ink{stroke:#252b32;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+  .msg{font:700 35px ui-monospace,monospace;fill:#f3f0e9;letter-spacing:-1px}
+  .small{font:15px ui-monospace,monospace;fill:#81a0b4}
+  #cigarm{transform-box:view-box;transform-origin:472px 203px;animation:raise 9s ease-in-out infinite}
+  @keyframes raise{0%,8%,31%,55%,78%,100%{transform:rotate(0)}13%,26%,60%,73%{transform:rotate(-48deg)}}
+  #smoke1{animation:smoke1 9s infinite}
+  #smoke2{animation:smoke2 9s infinite}
+  @keyframes smoke1{0%,15%{opacity:0;transform:translateY(12px)}19%,29%{opacity:1;transform:translateY(0)}34%,100%{opacity:0}}
+  @keyframes smoke2{0%,62%{opacity:0;transform:translateY(12px)}66%,76%{opacity:1;transform:translateY(0)}82%,100%{opacity:0}}
+  .rat{fill:#747d86;stroke:#c1c7cc;stroke-width:1.5}
+  .tail{fill:none;stroke:#c1c7cc;stroke-width:2;stroke-linecap:round}
+  .r1{animation:run1 7s linear infinite}.r2{animation:run2 6.2s linear infinite}.r3{animation:run3 7.8s linear infinite}.r4{animation:run4 6.7s linear infinite}.r5{animation:run5 7.3s linear infinite}.r6{animation:run6 6.5s linear infinite}.r7{animation:run7 7.6s linear infinite}.r8{animation:run8 6.9s linear infinite}
   @keyframes run1{from{transform:translateX(-100px)}to{transform:translateX(1300px)}}
-  @keyframes run2{from{transform:translateX(-250px)}to{transform:translateX(1250px)}}
-  @keyframes run3{from{transform:translateX(-400px)}to{transform:translateX(1200px)}}
-  @keyframes run4{from{transform:translateX(-550px)}to{transform:translateX(1150px)}}
-  @keyframes run5{from{transform:translateX(-700px)}to{transform:translateX(1100px)}}
-  @keyframes run6{from{transform:translateX(-850px)}to{transform:translateX(1050px)}}
-  @keyframes run7{from{transform:translateX(-1000px)}to{transform:translateX(1000px)}}
-  @keyframes run8{from{transform:translateX(-1150px)}to{transform:translateX(950px)}}
-  .feet{animation:feet .22s linear infinite alternate;transform-box:fill-box;transform-origin:center}
-  @keyframes feet{to{transform:rotate(28deg)}}
+  @keyframes run2{from{transform:translateX(-280px)}to{transform:translateX(1220px)}}
+  @keyframes run3{from{transform:translateX(-460px)}to{transform:translateX(1140px)}}
+  @keyframes run4{from{transform:translateX(-640px)}to{transform:translateX(1060px)}}
+  @keyframes run5{from{transform:translateX(-820px)}to{transform:translateX(980px)}}
+  @keyframes run6{from{transform:translateX(-1000px)}to{transform:translateX(900px)}}
+  @keyframes run7{from{transform:translateX(-1180px)}to{transform:translateX(820px)}}
+  @keyframes run8{from{transform:translateX(-1360px)}to{transform:translateX(740px)}}
  </style>
 </defs>
-<rect width="1200" height="440" rx="22" fill="url(#bg)"/>
-<path d="M0 350H1200" stroke="#304354" stroke-width="3"/>
-<path d="M0 358H1200" stroke="#152331" stroke-width="14"/>
-<g opacity=".18" stroke="#5ce6a0" fill="none"><path d="M34 38h110v58H34zM48 55l13 11-13 11m22-11h54"/><path d="M1080 44h78v50h-78zM1094 60h48m-48 13h31"/></g>
-<text x="42" y="36" class="mono" font-size="15" fill="#61e6a4">$ ./naveen --late-night-mode</text>
-<!-- standing developer, three-quarter side view -->
-<!-- legs and shoes -->
-<path d="M250 286l-5 83q-2 13 13 13h40q10-3 3-12l-27-84z" fill="#202e40" stroke="#53677e" stroke-width="3"/>
-<path d="M319 285l13 80q2 14 17 14h35q12-3 4-13l-40-89z" fill="#1a293a" stroke="#53677e" stroke-width="3"/>
-<path d="M247 372q-23 4-23 17h80q7-12-8-17zM337 371q-13 5-10 18h79q5-13-20-18z" fill="#0b1119" stroke="#708196" stroke-width="3"/>
-<!-- torso and jacket -->
-<path d="M230 151q45-31 105-22q62 8 78 65l-10 111q-83 28-166-2l-22-100q-3-31 15-52z" fill="url(#jacket)" stroke="#657b91" stroke-width="3"/>
-<path d="M294 133l27 28 27-27 17 30-25 38-19 91-20-91-28-38z" fill="#d9e1e9"/>
-<path d="M319 160l-15 25 16 99 17-99z" fill="#263a50"/>
-<path d="M276 149l-26 19 16 64 25-10-12-42m70-30 27 18-13 65-25-10 10-44" fill="none" stroke="#8294a8" stroke-width="3" opacity=".7"/>
-<!-- neck -->
-<path d="M291 110h54v43q-24 22-54 0z" fill="#a96f51"/>
-<!-- head facing slightly right -->
-<path d="M257 77q2-60 68-63q67 2 77 67l-6 42q-10 47-67 54q-57-4-70-54z" fill="#bd8463" stroke="#875b48" stroke-width="3"/>
-<!-- hair silhouette -->
-<path d="M256 100q-18-75 43-91q74-22 104 43q9 20 4 57l-19-25-20-9-18-24-25 18-21-14-19 27-21 1z" fill="#171b22"/>
-<path d="M374 66q23 18 18 51l-12 18-6-36z" fill="#171b22"/>
-<!-- ear, eyes, brows, nose, smile -->
-<ellipse cx="378" cy="111" rx="10" ry="15" fill="#b77c5c"/>
-<path d="M310 91q13-8 26 0m19-2q12-7 23 1" stroke="#392b29" stroke-width="4" fill="none" stroke-linecap="round"/>
-<ellipse cx="327" cy="103" rx="4" ry="5" fill="#202329"/><ellipse cx="365" cy="103" rx="4" ry="5" fill="#202329"/>
-<path d="M349 108l-5 19 11 3" fill="none" stroke="#87543f" stroke-width="3" stroke-linecap="round"/>
-<path d="M330 140q18 12 35-1" fill="none" stroke="#713f39" stroke-width="4" stroke-linecap="round"/>
-<!-- laptop arm, left hand stays holding laptop -->
-<path d="M247 169q-38 20-44 74l-1 30" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
-<path d="M201 268q-2 9 5 13" stroke="#bd8463" stroke-width="18" stroke-linecap="round"/>
-<g transform="translate(92 220) rotate(-5)">
- <rect x="0" y="0" width="112" height="133" rx="8" fill="#0b121b" stroke="#8294a8" stroke-width="4"/>
- <rect x="9" y="10" width="94" height="110" rx="3" fill="url(#screen)"/>
- <path d="M26 42l12 11-12 11m23-11h29" stroke="#62e6a3" stroke-width="4" fill="none" stroke-linecap="round"/>
- <path d="M-8 134h128l-12 9H2z" fill="#718398" stroke="#aebdca" stroke-width="2"/>
- <circle cx="56" cy="5" r="2" fill="#7a8fa3"/>
+<rect width="1200" height="500" rx="20" fill="url(#night)"/>
+<path d="M0 426H1200" stroke="#42576a" stroke-width="4"/>
+<path d="M0 436H1200" stroke="#172735" stroke-width="20"/>
+<text x="42" y="42" class="small">$ ./naveen --late-night-mode</text>
+<!-- standing figure: legs -->
+<path d="M310 333l-5 91h68l8-92z" fill="#1266a2" class="ink"/>
+<path d="M379 332l5 92h73l-13-100z" fill="#1266a2" class="ink"/>
+<path d="M304 416h74q8 15-2 19h-83q-8-8 11-19zM384 416h75q16 12 5 20h-77z" fill="#151c25" class="ink"/>
+<!-- body and collar -->
+<path d="M287 164q44-31 104-13q53 13 81 67l30 130q-78 31-209 0l-20-120q-7-43 14-64z" fill="url(#shirt)" class="ink"/>
+<path d="M327 151l34 31 34-31 19 35-30 27-23-12-25 12-29-28z" fill="#c0c0bc" class="ink"/>
+<path d="M358 181l-10 240" stroke="#333b42" stroke-width="4" fill="none"/>
+<!-- neck and head -->
+<path d="M342 126h54v45q-22 22-54 0z" fill="#e9a02b" class="ink"/>
+<path d="M291 69q5-57 66-61q65 0 83 56l-8 66q-9 43-66 49q-58-4-72-50z" fill="#f0a32e" class="ink"/>
+<path d="M286 95q-15-58 35-83q57-29 104 10q28 24 21 78l-20-27-16-23-18 13-12-20-28 23-18-8-19 29z" fill="#252329" stroke="#252329" stroke-width="5"/>
+<path d="M310 103q12 8 24 0m30 0q12 8 24 0" fill="none" stroke="#4a2c20" stroke-width="4" stroke-linecap="round"/>
+<path d="M365 112l-4 17 12 3m-31 24q20-7 35 2" fill="none" stroke="#75482e" stroke-width="4" stroke-linecap="round"/>
+<!-- left arm holding CLOSED laptop -->
+<path d="M291 190q-39 30-52 89l-10 48" fill="none" stroke="#efa02d" stroke-width="23" stroke-linecap="round"/>
+<path d="M225 321q-5 12 5 20" fill="none" stroke="#efa02d" stroke-width="18" stroke-linecap="round"/>
+<g transform="translate(105 255) rotate(-8)">
+ <rect x="0" y="0" width="125" height="155" rx="7" fill="#aeb8c4" stroke="#303944" stroke-width="5"/>
+ <path d="M10 10h105v135H10z" fill="#c5cbd1" opacity=".25"/>
+ <path d="M62 60c-9-11-26-7-25 8 1 15 25 28 25 28s24-13 25-28c1-15-16-19-25-8z" fill="#5b6672" transform="translate(0 8) scale(.72) translate(24 25)"/>
+ <path d="M-8 156h141l-12 13H4z" fill="#7f8995" stroke="#303944" stroke-width="4"/>
 </g>
-<!-- one continuous arm-and-cigarette rig, smoothly raised to the mouth twice -->
-<g id="smokingArm">
- <path d="M390 174 Q430 190 450 235 Q457 260 460 300" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round">
-  <animate attributeName="d" dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.10;0.14;0.29;0.33;0.57;0.61;0.76;0.80;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1" values="M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300"/>
- </path>
- <g transform="translate(460 303) rotate(-65)">
-  <animateTransform attributeName="transform" type="translate" dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.10;0.14;0.29;0.33;0.57;0.61;0.76;0.80;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1" values="460 303;460 303;357 109;357 109;460 303;460 303;357 109;357 109;460 303;460 303"/>
-  <rect x="-3" y="-19" width="6" height="39" rx="2" fill="#f4eee2"/>
-  <rect x="-3" y="-19" width="6" height="8" fill="#e65a4f"/>
-  <circle cx="0" cy="-21" r="4" fill="#ff704d" filter="url(#glow)"/>
+<!-- right arm and cigarette animate as one connected limb -->
+<g id="cigarm">
+ <path d="M438 190q46 16 53 65l4 46" fill="none" stroke="#efa02d" stroke-width="23" stroke-linecap="round"/>
+ <path d="M495 294q-2 12 9 17" fill="none" stroke="#efa02d" stroke-width="18" stroke-linecap="round"/>
+ <g transform="translate(504 310) rotate(-68)">
+  <rect x="-3" y="-20" width="6" height="42" rx="2" fill="#f5eee0" stroke="#6a4b3d" stroke-width="1"/>
+  <rect x="-3" y="-20" width="6" height="9" fill="#d94b43"/>
+  <circle cx="0" cy="-23" r="4" fill="#ff784d"/>
  </g>
 </g>
-<!-- smoke trails and text, two distinct puffs -->
-<g id="smokeA">
- <path d="M358 84q-2-26 24-35q25-9 22-30" fill="none" stroke="#b8c9c7" stroke-width="3" stroke-linecap="round" opacity=".65"/>
- <text x="492" y="105" class="msg">Hii, I'm Naveen</text>
- <path d="M477 115q18-14 36-8" stroke="#5ce6a0" stroke-width="2" fill="none" opacity=".7"/>
+<!-- smoke curls and messages -->
+<g id="smoke1">
+ <path d="M506 240q-25-24 2-43q23-17 4-37q-8-9 3-18" fill="none" stroke="#d5d9dc" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+ <text x="610" y="155" class="msg">Hii, I'm Naveen</text>
+ <path d="M595 168q32-20 57-5" fill="none" stroke="#8be2b0" stroke-width="2" opacity=".8"/>
 </g>
-<g id="smokeB">
- <path d="M358 84q-2-26 24-35q25-9 22-30" fill="none" stroke="#b8c9c7" stroke-width="3" stroke-linecap="round" opacity=".65"/>
- <text x="492" y="105" class="msg">I may be slow to reply</text>
- <path d="M477 115q18-14 36-8" stroke="#5ce6a0" stroke-width="2" fill="none" opacity=".7"/>
+<g id="smoke2">
+ <path d="M506 240q-25-24 2-43q23-17 4-37q-8-9 3-18" fill="none" stroke="#d5d9dc" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+ <text x="610" y="155" class="msg">I may be slow to reply</text>
+ <path d="M595 168q32-20 57-5" fill="none" stroke="#8be2b0" stroke-width="2" opacity=".8"/>
 </g>
-<text x="492" y="105" class="msg" opacity="0">Hii, I'm Naveen</text>
-<!-- actual message timing controlled independently -->
-<text x="492" y="105" class="msg" opacity="0">I may be slow to reply</text>
-<!-- small status on the right -->
-<text x="492" y="164" class="mono" font-size="15" fill="#7f96a9">OPEN SOURCE ENTHUSIAST</text>
-<text x="492" y="194" class="mono" font-size="13" fill="#526b7d">coffee • code • repeat</text>
-<!-- eight tiny running rats across the floor -->
-<g transform="translate(0 0)">
- <g class="rat1" transform="translate(0 0)"><g transform="translate(0 337) scale(.8)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat2" transform="translate(0 0)"><g transform="translate(0 342) scale(.65)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat3" transform="translate(0 0)"><g transform="translate(0 336) scale(.9)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat4" transform="translate(0 0)"><g transform="translate(0 342) scale(.72)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat5" transform="translate(0 0)"><g transform="translate(0 338) scale(.82)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat6" transform="translate(0 0)"><g transform="translate(0 344) scale(.7)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat7" transform="translate(0 0)"><g transform="translate(0 337) scale(.86)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
- <g class="rat8" transform="translate(0 0)"><g transform="translate(0 342) scale(.76)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
-</g>
-<text x="42" y="414" class="mono" font-size="13" fill="#526b7d">NAVEEN KARTHIKEYAN E  /  IIT-M × VIT</text>
+<text x="610" y="205" class="small">OPEN SOURCE ENTHUSIAST</text>
+<!-- exactly eight tiny rats running along the floor -->
+<g class="r1" transform="translate(0 0)"><g transform="translate(0 414)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r2" transform="translate(0 0)"><g transform="translate(0 420) scale(.8)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r3" transform="translate(0 0)"><g transform="translate(0 413) scale(.9)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r4" transform="translate(0 0)"><g transform="translate(0 420) scale(.72)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r5" transform="translate(0 0)"><g transform="translate(0 415) scale(.85)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r6" transform="translate(0 0)"><g transform="translate(0 421) scale(.75)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r7" transform="translate(0 0)"><g transform="translate(0 414) scale(.92)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
+<g class="r8" transform="translate(0 0)"><g transform="translate(0 420) scale(.78)"><ellipse class="rat" rx="15" ry="7"/><circle class="rat" cx="14" cy="-4" r="6"/><circle cx="17" cy="-5" r="1.4"/><path class="tail" d="M-14 1q-17-12-25-2"/><path d="M-5 5l-5 7m13-7 5 7" stroke="#c1c7cc" stroke-width="2"/></g></g>
 </svg>
