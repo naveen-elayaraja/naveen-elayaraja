@@ -52,9 +52,7 @@
 
 </div>
 
-**Also worked with:** ESP32, ESP8266, Raspberry Pi Pico, CoppeliaSim, e-Yantra, Selenium WebDriver, HX711 load-cell modules, FastAPI, PostgreSQL and REST API integration.
 
-**Exploring next:** cloud platforms, AI agents, deeper systems engineering and open-source programmes such as GSoC.
 
 ## 📊 GitHub stats & activity
 
