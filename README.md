@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/intro-animation-v2.svg?v=3" alt="Standing cartoon developer holding a laptop and cigarette, taking two puffs as messages appear, with eight rats running across the floor" width="100%" />
+<img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/sleepy-smoker.gif?v=1" alt="Standing cartoon developer holding a laptop and cigarette, taking two puffs as messages appear, with eight rats running across the floor" width="100%" />
 
 # Hey, I'm Naveen Karthikeyan E 👋
 
