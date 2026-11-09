@@ -16,14 +16,8 @@
   #puff2{animation:puff2 9s infinite}
   #smokeA{animation:smokeA 9s infinite}
   #smokeB{animation:smokeB 9s infinite}
-  #restArm{animation:restArm 9s infinite}
-  #liftArm{animation:liftArm 9s infinite}
-  #cigDown{animation:cigDown 9s infinite}
-  #cigAtMouth{animation:cigAtMouth 9s infinite}
-  @keyframes restArm{0%,8%,31%,55%,78%,100%{opacity:1}10%,29%,57%,76%{opacity:0}}
-  @keyframes liftArm{0%,8%,31%,55%,78%,100%{opacity:0}10%,29%,57%,76%{opacity:1}}
-  @keyframes cigDown{0%,8%,31%,55%,78%,100%{opacity:1}10%,29%,57%,76%{opacity:0}}
-  @keyframes cigAtMouth{0%,8%,31%,55%,78%,100%{opacity:0}10%,29%,57%,76%{opacity:1}}
+  #smokingArm{animation:smokeArm 9s ease-in-out infinite;transform-box:view-box;transform-origin:390px 174px}
+  @keyframes smokeArm{0%,8%,31%,55%,78%,100%{transform:rotate(0deg)}14%,25%,61%,72%{transform:rotate(140deg)}}
   @keyframes puff1{0%,13%{opacity:0;transform:translate(0,8px) scale(.85)}17%,28%{opacity:1;transform:translate(0,0) scale(1)}35%,100%{opacity:0}}
   @keyframes puff2{0%,59%{opacity:0;transform:translate(0,8px) scale(.85)}63%,75%{opacity:1;transform:translate(0,0) scale(1)}83%,100%{opacity:0}}
   @keyframes smokeA{0%,12%{opacity:0;transform:translate(0,10px)}17%,30%{opacity:.9;transform:translate(0,-5px)}37%,100%{opacity:0}}
@@ -79,23 +73,15 @@
  <path d="M-8 134h128l-12 9H2z" fill="#718398" stroke="#aebdca" stroke-width="2"/>
  <circle cx="56" cy="5" r="2" fill="#7a8fa3"/>
 </g>
-<!-- cigarette arm at rest -->
-<g id="restArm">
+<!-- one continuous arm-and-cigarette rig, smoothly raised to the mouth twice -->
+<g id="smokingArm">
  <path d="M390 174q45 23 54 77l3 37" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
  <path d="M446 284q-1 11 10 15" fill="none" stroke="#bd8463" stroke-width="17" stroke-linecap="round"/>
-</g>
-<g id="cigDown" transform="translate(460 303) rotate(-65)">
- <rect x="-3" y="-19" width="6" height="39" rx="2" fill="#f4eee2"/><rect x="-3" y="-19" width="6" height="8" fill="#e65a4f"/>
- <circle cx="0" cy="-21" r="4" fill="#ff6a4c" filter="url(#glow)"/>
-</g>
-<!-- smoking arm: arm and cigarette move together to mouth -->
-<g id="liftArm">
- <path d="M390 174q39 1 18-39q-8-14-35-23" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
- <path d="M375 113q-9-8-18-3" fill="none" stroke="#bd8463" stroke-width="17" stroke-linecap="round"/>
-</g>
-<g id="cigAtMouth" transform="translate(357 109) rotate(-12)">
- <rect x="-3" y="-21" width="6" height="42" rx="2" fill="#f4eee2"/><rect x="-3" y="-21" width="6" height="9" fill="#e65a4f"/>
- <circle cx="0" cy="-24" r="5" fill="#ff704d" filter="url(#glow)"/>
+ <g transform="translate(460 303) rotate(-65)">
+  <rect x="-3" y="-19" width="6" height="39" rx="2" fill="#f4eee2"/>
+  <rect x="-3" y="-19" width="6" height="8" fill="#e65a4f"/>
+  <circle cx="0" cy="-21" r="4" fill="#ff704d" filter="url(#glow)"/>
+ </g>
 </g>
 <!-- smoke trails and text, two distinct puffs -->
 <g id="smokeA">
