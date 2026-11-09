@@ -93,6 +93,6 @@
 
 <br/><br/>
 
-*Build · Learn · Commit · Contribute · Repeat*
+
 
 </div>
