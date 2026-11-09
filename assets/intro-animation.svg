@@ -16,8 +16,7 @@
   #puff2{animation:puff2 9s infinite}
   #smokeA{animation:smokeA 9s infinite}
   #smokeB{animation:smokeB 9s infinite}
-  #smokingArm{animation:smokeArm 9s ease-in-out infinite;transform-box:view-box;transform-origin:390px 174px}
-  @keyframes smokeArm{0%,8%,31%,55%,78%,100%{transform:rotate(0deg)}14%,25%,61%,72%{transform:rotate(140deg)}}
+
   @keyframes puff1{0%,13%{opacity:0;transform:translate(0,8px) scale(.85)}17%,28%{opacity:1;transform:translate(0,0) scale(1)}35%,100%{opacity:0}}
   @keyframes puff2{0%,59%{opacity:0;transform:translate(0,8px) scale(.85)}63%,75%{opacity:1;transform:translate(0,0) scale(1)}83%,100%{opacity:0}}
   @keyframes smokeA{0%,12%{opacity:0;transform:translate(0,10px)}17%,30%{opacity:.9;transform:translate(0,-5px)}37%,100%{opacity:0}}
@@ -75,9 +74,11 @@
 </g>
 <!-- one continuous arm-and-cigarette rig, smoothly raised to the mouth twice -->
 <g id="smokingArm">
- <path d="M390 174q45 23 54 77l3 37" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
- <path d="M446 284q-1 11 10 15" fill="none" stroke="#bd8463" stroke-width="17" stroke-linecap="round"/>
+ <path d="M390 174 Q430 190 450 235 Q457 260 460 300" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round">
+  <animate attributeName="d" dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.10;0.14;0.29;0.33;0.57;0.61;0.76;0.80;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1" values="M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q370 150 360 125 Q358 117 357 109;M390 174 Q430 190 450 235 Q457 260 460 300;M390 174 Q430 190 450 235 Q457 260 460 300"/>
+ </path>
  <g transform="translate(460 303) rotate(-65)">
+  <animateTransform attributeName="transform" type="translate" dur="9s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.10;0.14;0.29;0.33;0.57;0.61;0.76;0.80;1" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1" values="460 303;460 303;357 109;357 109;460 303;460 303;357 109;357 109;460 303;460 303"/>
   <rect x="-3" y="-19" width="6" height="39" rx="2" fill="#f4eee2"/>
   <rect x="-3" y="-19" width="6" height="8" fill="#e65a4f"/>
   <circle cx="0" cy="-21" r="4" fill="#ff704d" filter="url(#glow)"/>
