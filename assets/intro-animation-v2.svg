@@ -51,7 +51,7 @@
 <g transform="translate(105 255) rotate(-8)">
  <rect x="0" y="0" width="125" height="155" rx="7" fill="#aeb8c4" stroke="#303944" stroke-width="5"/>
  <path d="M10 10h105v135H10z" fill="#c5cbd1" opacity=".25"/>
- <path d="M62 60c-9-11-26-7-25 8 1 15 25 28 25 28s24-13 25-28c1-15-16-19-25-8z" fill="#5b6672" transform="translate(0 8) scale(.72) translate(24 25)"/>
+ <path d="M62 61c-8-10-21-8-26 1-7 12 1 32 10 39 5 4 10 1 16-2 6 3 11 6 16 2 8-7 16-27 9-39-5-9-18-11-25-1z" fill="#4f5964"/><path d="M64 57c-1-10 7-17 17-18-1 9-7 16-17 18z" fill="#4f5964"/><circle cx="89" cy="66" r="8" fill="#c5cbd1"/>
  <path d="M-8 156h141l-12 13H4z" fill="#7f8995" stroke="#303944" stroke-width="4"/>
 </g>
 <!-- right arm and cigarette animate as one connected limb -->
