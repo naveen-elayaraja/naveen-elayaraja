@@ -11,7 +11,7 @@
 
 **Computer Science student · Developer · Open-source enthusiast**
 
-Integrated M.Tech CSE @ VIT-AP &nbsp;|&nbsp; BS in Data Science @ IIT Madras
+**IIT-M x VIT**
 
 [![GitHub](https://img.shields.io/badge/GitHub-naveen--elayaraja-181717?style=for-the-badge&logo=github)](https://github.com/naveen-elayaraja)
 [![Email](https://img.shields.io/badge/Email-Let's%20build%20something-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:naveenkarthikeyaneelayaraja@gmail.com)
@@ -22,13 +22,7 @@ Integrated M.Tech CSE @ VIT-AP &nbsp;|&nbsp; BS in Data Science @ IIT Madras
 
 ## `$ whoami`
 
-I'm a computer science student who enjoys turning ideas into working systems — from backend APIs and web applications to embedded systems and robotics. I like learning by building, understanding how things work under the hood, and contributing to projects that solve real problems.
-
-- 🎓 Studying **Integrated M.Tech in Computer Science at VIT-AP** and **BS in Data Science at IIT Madras**.
-- 🔭 Building practical projects across software, embedded systems and robotics.
-- 🌱 Currently strengthening **DSA, system fundamentals, AI tooling and open-source development**.
-- 🤝 Interested in meaningful open-source contributions and collaborative engineering.
-- 🌙 Usually found debugging, building or learning after hours.
+**Open source enthusiast**
 
 ## 🧰 Tech stack & toolkit
 
@@ -61,16 +55,6 @@ I'm a computer science student who enjoys turning ideas into working systems —
 **Also worked with:** ESP32, ESP8266, Raspberry Pi Pico, CoppeliaSim, e-Yantra, Selenium WebDriver, HX711 load-cell modules, FastAPI, PostgreSQL and REST API integration.
 
 **Exploring next:** cloud platforms, AI agents, deeper systems engineering and open-source programmes such as GSoC.
-
-## 🚀 Selected work
-
-| Project | What it is |
-|---|---|
-| [ELEVATE-X](https://github.com/naveen-elayaraja/ELEVATE-X) | Adaptive 2.5D LiDAR perception prototype with AI-based depth estimation and variable-resolution mapping. |
-| [eYantra – Task 3A](https://github.com/naveen-elayaraja/eYantra-Task-3A) | Self-balancing bicycle navigation using Python, CoppeliaSim and LQR control. |
-| [NK Bag House](https://github.com/naveen-elayaraja/NK-Bag-House-) | Web platform for a bag manufacturing business. |
-| [Smart Basket Backend](https://github.com/naveen-elayaraja/Smart-Basket---Backend) | FastAPI backend and PostgreSQL data model for a smart retail trolley prototype. |
-| [Smart Basket Frontend](https://github.com/naveen-elayaraja/Smart-basket-Frontend) | Next.js and TypeScript frontend connected to the backend API. |
 
 ## 📊 GitHub stats & activity
 
