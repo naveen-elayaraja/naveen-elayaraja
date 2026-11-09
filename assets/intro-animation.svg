@@ -1,72 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-label="Animated cartoon developer with two smoke messages">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+<title id="title">Naveen's late-night coding intro</title>
+<desc id="desc">A standing cartoon developer holds a laptop in one hand and a cigarette in the other, takes two puffs, and introduces himself with smoke-written messages while eight little rats run across the floor.</desc>
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101821"/><stop offset="1" stop-color="#070b10"/></linearGradient>
- <linearGradient id="shirt" x2="0" y2="1"><stop stop-color="#384a63"/><stop offset="1" stop-color="#182536"/></linearGradient>
- <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111c29"/><stop offset=".58" stop-color="#090e16"/><stop offset="1" stop-color="#101923"/></linearGradient>
+ <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#344b65"/><stop offset="1" stop-color="#172638"/></linearGradient>
+ <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#1a3440"/><stop offset="1" stop-color="#07131a"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
  <style>
- .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
- .message{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:32px;letter-spacing:.3px;fill:#e8fff0;opacity:0}
- #msg1{animation:m1 10s infinite} #msg2{animation:m2 10s infinite}
- #armRest{animation:armRest 10s infinite} #armLift{animation:armLift 10s infinite}
- #cigRest{animation:cigRest 10s infinite} #cigToMouth{animation:cigToMouth 10s infinite}
- #embers{animation:ember 10s infinite}
- #smoke1{animation:s1 10s infinite} #smoke2{animation:s2 10s infinite}
- @keyframes armLift{0%,8%,30%,55%,100%{opacity:0}10%,26%,58%,76%{opacity:1}}
- @keyframes armRest{0%,8%,30%,55%,100%{opacity:1}10%,26%,58%,76%{opacity:0}}
- @keyframes cigToMouth{0%,8%,30%,55%,100%{opacity:0}10%,26%,58%,76%{opacity:1}}
- @keyframes cigRest{0%,8%,30%,55%,100%{opacity:1}10%,26%,58%,76%{opacity:0}}
- @keyframes ember{0%,12%,21%,60%,69%{opacity:.15}14%,18%,62%,66%{opacity:1}100%{opacity:.15}}
- @keyframes m1{0%,14%{opacity:0}18%,29%{opacity:1}36%,100%{opacity:0}}
- @keyframes m2{0%,61%{opacity:0}66%,77%{opacity:1}84%,100%{opacity:0}}
- @keyframes s1{0%,13%{opacity:0;transform:translateY(9px)}18%,30%{opacity:1;transform:translateY(0)}36%,100%{opacity:0}}
- @keyframes s2{0%,61%{opacity:0;transform:translateY(9px)}66%,78%{opacity:1;transform:translateY(0)}84%,100%{opacity:0}}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .msg{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:34px;fill:#e9fff1;letter-spacing:-1px}
+  .rat{fill:#8994a3;stroke:#c0c9d3;stroke-width:1.1;stroke-linejoin:round}
+  .leg{stroke:#aeb8c5;stroke-width:2.4;stroke-linecap:round;fill:none}
+  .tail{stroke:#aeb8c5;stroke-width:1.8;fill:none;stroke-linecap:round}
+  #puff1{animation:puff1 9s infinite}
+  #puff2{animation:puff2 9s infinite}
+  #smokeA{animation:smokeA 9s infinite}
+  #smokeB{animation:smokeB 9s infinite}
+  #restArm{animation:restArm 9s infinite}
+  #liftArm{animation:liftArm 9s infinite}
+  #cigDown{animation:cigDown 9s infinite}
+  #cigAtMouth{animation:cigAtMouth 9s infinite}
+  @keyframes restArm{0%,8%,31%,55%,78%,100%{opacity:1}10%,29%,57%,76%{opacity:0}}
+  @keyframes liftArm{0%,8%,31%,55%,78%,100%{opacity:0}10%,29%,57%,76%{opacity:1}}
+  @keyframes cigDown{0%,8%,31%,55%,78%,100%{opacity:1}10%,29%,57%,76%{opacity:0}}
+  @keyframes cigAtMouth{0%,8%,31%,55%,78%,100%{opacity:0}10%,29%,57%,76%{opacity:1}}
+  @keyframes puff1{0%,13%{opacity:0;transform:translate(0,8px) scale(.85)}17%,28%{opacity:1;transform:translate(0,0) scale(1)}35%,100%{opacity:0}}
+  @keyframes puff2{0%,59%{opacity:0;transform:translate(0,8px) scale(.85)}63%,75%{opacity:1;transform:translate(0,0) scale(1)}83%,100%{opacity:0}}
+  @keyframes smokeA{0%,12%{opacity:0;transform:translate(0,10px)}17%,30%{opacity:.9;transform:translate(0,-5px)}37%,100%{opacity:0}}
+  @keyframes smokeB{0%,58%{opacity:0;transform:translate(0,10px)}63%,77%{opacity:.9;transform:translate(0,-5px)}84%,100%{opacity:0}}
+  .rat1{animation:run1 5.8s linear infinite}.rat2{animation:run2 6.3s linear infinite}.rat3{animation:run3 5.4s linear infinite}.rat4{animation:run4 6.8s linear infinite}.rat5{animation:run5 5.9s linear infinite}.rat6{animation:run6 6.5s linear infinite}.rat7{animation:run7 5.6s linear infinite}.rat8{animation:run8 6.1s linear infinite}
+  @keyframes run1{from{transform:translateX(-100px)}to{transform:translateX(1300px)}}
+  @keyframes run2{from{transform:translateX(-250px)}to{transform:translateX(1250px)}}
+  @keyframes run3{from{transform:translateX(-400px)}to{transform:translateX(1200px)}}
+  @keyframes run4{from{transform:translateX(-550px)}to{transform:translateX(1150px)}}
+  @keyframes run5{from{transform:translateX(-700px)}to{transform:translateX(1100px)}}
+  @keyframes run6{from{transform:translateX(-850px)}to{transform:translateX(1050px)}}
+  @keyframes run7{from{transform:translateX(-1000px)}to{transform:translateX(1000px)}}
+  @keyframes run8{from{transform:translateX(-1150px)}to{transform:translateX(950px)}}
+  .feet{animation:feet .22s linear infinite alternate;transform-box:fill-box;transform-origin:center}
+  @keyframes feet{to{transform:rotate(28deg)}}
  </style>
 </defs>
-<rect width="1000" height="360" rx="20" fill="url(#bg)"/>
-<path d="M0 318H1000" stroke="#263747" stroke-width="2"/>
-<g opacity=".22" stroke="#4ade80" fill="none"><path d="M30 35h90v52H30zM42 51l12 8-12 8m19-8h35"/><path d="M900 50h60v38h-60zM912 64h35m-35 10h23"/></g>
-<text x="40" y="42" class="mono" font-size="16" fill="#4ade80">$ ./naveen --intro</text>
-<!-- desk, laptop and mug -->
-<path d="M70 288H930" stroke="#43566a" stroke-width="8" stroke-linecap="round"/>
-<path d="M690 284l14-90h150l14 90" fill="#1b2938" stroke="#60758b" stroke-width="3"/>
-<rect x="718" y="205" width="120" height="63" rx="7" fill="#07111a" stroke="#4ade80" stroke-width="2"/>
-<text x="739" y="245" class="mono" font-size="25" fill="#4ade80">&lt;/&gt;_</text>
-<path d="M875 281h50v-41q0-8-8-8h-34q-8 0-8 8z" fill="#172333" stroke="#8999a9" stroke-width="2"/>
-<path d="M925 245q25-3 18 18q-5 13-18 8" fill="none" stroke="#8999a9" stroke-width="4"/>
-<!-- character torso -->
-<path d="M180 318q0-107 76-133q87-31 150 9q45 32 56 124z" fill="url(#shirt)" stroke="#657b93" stroke-width="4"/>
-<path d="M261 204l-5 66 62 48 52-48-8-67" fill="#d4dbe2" opacity=".9"/>
+<rect width="1200" height="440" rx="22" fill="url(#bg)"/>
+<path d="M0 350H1200" stroke="#304354" stroke-width="3"/>
+<path d="M0 358H1200" stroke="#152331" stroke-width="14"/>
+<g opacity=".18" stroke="#5ce6a0" fill="none"><path d="M34 38h110v58H34zM48 55l13 11-13 11m22-11h54"/><path d="M1080 44h78v50h-78zM1094 60h48m-48 13h31"/></g>
+<text x="42" y="36" class="mono" font-size="15" fill="#61e6a4">$ ./naveen --late-night-mode</text>
+<!-- standing developer, three-quarter side view -->
+<!-- legs and shoes -->
+<path d="M250 286l-5 83q-2 13 13 13h40q10-3 3-12l-27-84z" fill="#202e40" stroke="#53677e" stroke-width="3"/>
+<path d="M319 285l13 80q2 14 17 14h35q12-3 4-13l-40-89z" fill="#1a293a" stroke="#53677e" stroke-width="3"/>
+<path d="M247 372q-23 4-23 17h80q7-12-8-17zM337 371q-13 5-10 18h79q5-13-20-18z" fill="#0b1119" stroke="#708196" stroke-width="3"/>
+<!-- torso and jacket -->
+<path d="M230 151q45-31 105-22q62 8 78 65l-10 111q-83 28-166-2l-22-100q-3-31 15-52z" fill="url(#jacket)" stroke="#657b91" stroke-width="3"/>
+<path d="M294 133l27 28 27-27 17 30-25 38-19 91-20-91-28-38z" fill="#d9e1e9"/>
+<path d="M319 160l-15 25 16 99 17-99z" fill="#263a50"/>
+<path d="M276 149l-26 19 16 64 25-10-12-42m70-30 27 18-13 65-25-10 10-44" fill="none" stroke="#8294a8" stroke-width="3" opacity=".7"/>
 <!-- neck -->
-<path d="M292 177h57v47q-25 24-57 0z" fill="#a96f51"/>
-<!-- head -->
-<ellipse cx="322" cy="132" rx="73" ry="82" fill="#bd8463" stroke="#7b5140" stroke-width="3"/>
-<!-- hair -->
-<path d="M252 135q-20-92 67-111q72-13 92 51q10 29-4 67l-16-44-17-20-27 20-22-26-28 21-22-4z" fill="#15171d"/>
-<path d="M252 117q-19 4-17 30q1 17 14 23l7-29m145-30q20 9 14 32q-4 16-18 22" fill="#15171d"/>
-<!-- face expression -->
-<path d="M285 139q13-8 26 0m28 0q13-8 26 0" fill="none" stroke="#3a2a27" stroke-width="4" stroke-linecap="round"/>
-<path d="M326 144l-5 17 10 3" fill="none" stroke="#87543f" stroke-width="3" stroke-linecap="round"/>
-<path d="M307 178q16 11 32 0" fill="none" stroke="#713f39" stroke-width="4" stroke-linecap="round"/>
-<!-- hand resting at side -->
-<path id="armRest" d="M381 220q31 35 34 79" fill="none" stroke="#bd8463" stroke-width="24" stroke-linecap="round"/>
-<path id="handRest" d="M416 292q-4 18 8 24" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
-<!-- lifted arm -->
-<g id="armLift">
- <path d="M380 220q45-8 32-58q-4-16-27-30" fill="none" stroke="#bd8463" stroke-width="24" stroke-linecap="round"/>
- <path d="M382 132q-10-9-19-2" fill="none" stroke="#bd8463" stroke-width="20" stroke-linecap="round"/>
+<path d="M291 110h54v43q-24 22-54 0z" fill="#a96f51"/>
+<!-- head facing slightly right -->
+<path d="M257 77q2-60 68-63q67 2 77 67l-6 42q-10 47-67 54q-57-4-70-54z" fill="#bd8463" stroke="#875b48" stroke-width="3"/>
+<!-- hair silhouette -->
+<path d="M256 100q-18-75 43-91q74-22 104 43q9 20 4 57l-19-25-20-9-18-24-25 18-21-14-19 27-21 1z" fill="#171b22"/>
+<path d="M374 66q23 18 18 51l-12 18-6-36z" fill="#171b22"/>
+<!-- ear, eyes, brows, nose, smile -->
+<ellipse cx="378" cy="111" rx="10" ry="15" fill="#b77c5c"/>
+<path d="M310 91q13-8 26 0m19-2q12-7 23 1" stroke="#392b29" stroke-width="4" fill="none" stroke-linecap="round"/>
+<ellipse cx="327" cy="103" rx="4" ry="5" fill="#202329"/><ellipse cx="365" cy="103" rx="4" ry="5" fill="#202329"/>
+<path d="M349 108l-5 19 11 3" fill="none" stroke="#87543f" stroke-width="3" stroke-linecap="round"/>
+<path d="M330 140q18 12 35-1" fill="none" stroke="#713f39" stroke-width="4" stroke-linecap="round"/>
+<!-- laptop arm, left hand stays holding laptop -->
+<path d="M247 169q-38 20-44 74l-1 30" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
+<path d="M201 268q-2 9 5 13" stroke="#bd8463" stroke-width="18" stroke-linecap="round"/>
+<g transform="translate(92 220) rotate(-5)">
+ <rect x="0" y="0" width="112" height="133" rx="8" fill="#0b121b" stroke="#8294a8" stroke-width="4"/>
+ <rect x="9" y="10" width="94" height="110" rx="3" fill="url(#screen)"/>
+ <path d="M26 42l12 11-12 11m23-11h29" stroke="#62e6a3" stroke-width="4" fill="none" stroke-linecap="round"/>
+ <path d="M-8 134h128l-12 9H2z" fill="#718398" stroke="#aebdca" stroke-width="2"/>
+ <circle cx="56" cy="5" r="2" fill="#7a8fa3"/>
 </g>
-<!-- cigarettes: clearly moves with hand -->
-<g id="cigRest" transform="translate(423 306) rotate(-62)">
- <rect x="-2" y="-17" width="5" height="35" rx="2" fill="#f4eee2"/><rect x="-2" y="-17" width="5" height="7" fill="#e65a4f"/>
+<!-- cigarette arm at rest -->
+<g id="restArm">
+ <path d="M390 174q45 23 54 77l3 37" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
+ <path d="M446 284q-1 11 10 15" fill="none" stroke="#bd8463" stroke-width="17" stroke-linecap="round"/>
 </g>
-<g id="cigToMouth" transform="translate(378 132) rotate(-8)">
- <rect x="-2" y="-19" width="5" height="38" rx="2" fill="#f4eee2"/><rect x="-2" y="-19" width="5" height="8" fill="#e65a4f"/>
+<g id="cigDown" transform="translate(460 303) rotate(-65)">
+ <rect x="-3" y="-19" width="6" height="39" rx="2" fill="#f4eee2"/><rect x="-3" y="-19" width="6" height="8" fill="#e65a4f"/>
+ <circle cx="0" cy="-21" r="4" fill="#ff6a4c" filter="url(#glow)"/>
 </g>
-<circle id="embers" cx="381" cy="115" r="5" fill="#ff624d" filter="url(#soft)"/>
-<!-- smoke is animated text, not a speech cloud -->
-<g id="smoke1"><path d="M395 107q38-8 62-30q28-28 61-18" fill="none" stroke="#dce8e3" stroke-width="3" opacity=".55" stroke-linecap="round"/><text class="message" x="510" y="80">Hii, I'm Naveen</text></g>
-<g id="smoke2"><path d="M395 107q38-8 62-30q28-28 61-18" fill="none" stroke="#dce8e3" stroke-width="3" opacity=".55" stroke-linecap="round"/><text class="message" x="510" y="80">I may be slow to reply</text></g>
-<text id="msg1" class="message" x="510" y="80">Hii, I'm Naveen</text>
-<text id="msg2" class="message" x="510" y="80">I may be slow to reply</text>
-<text x="40" y="345" class="mono" font-size="14" fill="#7890a4">OPEN SOURCE ENTHUSIAST</text>
+<!-- smoking arm: arm and cigarette move together to mouth -->
+<g id="liftArm">
+ <path d="M390 174q39 1 18-39q-8-14-35-23" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
+ <path d="M375 113q-9-8-18-3" fill="none" stroke="#bd8463" stroke-width="17" stroke-linecap="round"/>
+</g>
+<g id="cigAtMouth" transform="translate(357 109) rotate(-12)">
+ <rect x="-3" y="-21" width="6" height="42" rx="2" fill="#f4eee2"/><rect x="-3" y="-21" width="6" height="9" fill="#e65a4f"/>
+ <circle cx="0" cy="-24" r="5" fill="#ff704d" filter="url(#glow)"/>
+</g>
+<!-- smoke trails and text, two distinct puffs -->
+<g id="smokeA">
+ <path d="M358 84q-2-26 24-35q25-9 22-30" fill="none" stroke="#b8c9c7" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+ <text x="492" y="105" class="msg">Hii, I'm Naveen</text>
+ <path d="M477 115q18-14 36-8" stroke="#5ce6a0" stroke-width="2" fill="none" opacity=".7"/>
+</g>
+<g id="smokeB">
+ <path d="M358 84q-2-26 24-35q25-9 22-30" fill="none" stroke="#b8c9c7" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+ <text x="492" y="105" class="msg">I may be slow to reply</text>
+ <path d="M477 115q18-14 36-8" stroke="#5ce6a0" stroke-width="2" fill="none" opacity=".7"/>
+</g>
+<text x="492" y="105" class="msg" opacity="0">Hii, I'm Naveen</text>
+<!-- actual message timing controlled independently -->
+<text x="492" y="105" class="msg" opacity="0">I may be slow to reply</text>
+<!-- small status on the right -->
+<text x="492" y="164" class="mono" font-size="15" fill="#7f96a9">OPEN SOURCE ENTHUSIAST</text>
+<text x="492" y="194" class="mono" font-size="13" fill="#526b7d">coffee • code • repeat</text>
+<!-- eight tiny running rats across the floor -->
+<g transform="translate(0 0)">
+ <g class="rat1" transform="translate(0 0)"><g transform="translate(0 337) scale(.8)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat2" transform="translate(0 0)"><g transform="translate(0 342) scale(.65)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat3" transform="translate(0 0)"><g transform="translate(0 336) scale(.9)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat4" transform="translate(0 0)"><g transform="translate(0 342) scale(.72)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat5" transform="translate(0 0)"><g transform="translate(0 338) scale(.82)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat6" transform="translate(0 0)"><g transform="translate(0 344) scale(.7)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat7" transform="translate(0 0)"><g transform="translate(0 337) scale(.86)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+ <g class="rat8" transform="translate(0 0)"><g transform="translate(0 342) scale(.76)"><ellipse class="rat" cx="0" cy="0" rx="16" ry="8"/><circle class="rat" cx="14" cy="-5" r="7"/><circle cx="18" cy="-7" r="1.4" fill="#111"/><path class="tail" d="M-15 1q-15-8-20 3"/><path class="leg feet" d="M-7 5l-5 7m16-7 5 7"/></g></g>
+</g>
+<text x="42" y="414" class="mono" font-size="13" fill="#526b7d">NAVEEN KARTHIKEYAN E  /  IIT-M × VIT</text>
 </svg>
