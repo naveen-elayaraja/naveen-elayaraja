@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<img src="assets/naveen-intro.gif" alt="Cartoon developer animation introducing Naveen" width="100%" />
+<img src="assets/intro-animation.svg" alt="Cartoon developer animation introducing Naveen" width="100%" />
 
 # Hey, I'm Naveen Karthikeyan E 👋
 
