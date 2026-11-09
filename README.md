@@ -5,7 +5,7 @@
 
 <div align="center">
 
-<img src="assets/intro-animation.svg" alt="Cartoon developer animation introducing Naveen" width="100%" />
+<img src="assets/intro-animation.svg" alt="Standing cartoon developer holding a laptop and cigarette, taking two puffs as messages appear, with eight rats running across the floor" width="100%" />
 
 # Hey, I'm Naveen Karthikeyan E 👋
 
