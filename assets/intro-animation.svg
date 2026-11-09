@@ -1,42 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360" role="img" aria-label="Animated cartoon developer with two smoke messages">
 <defs>
- <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#111923"/><stop offset="1" stop-color="#080d13"/></linearGradient>
- <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101821"/><stop offset="1" stop-color="#070b10"/></linearGradient>
+ <linearGradient id="shirt" x2="0" y2="1"><stop stop-color="#384a63"/><stop offset="1" stop-color="#182536"/></linearGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="5"/></filter>
  <style>
- .mono{font-family:ui-monospace,Menlo,monospace}.smoke{font-family:ui-monospace,Menlo,monospace;font-size:28px;font-weight:700;fill:#f1f5f9}
- .puff{fill:#d9e1e5;opacity:.0}
- #msg1{animation:show1 12s infinite} #msg2{animation:show2 12s infinite}
- #armDown{animation:armDown 12s infinite} #armUp{animation:armUp 12s infinite}
- #cloud1{animation:cloud1 12s infinite} #cloud2{animation:cloud2 12s infinite}
- @keyframes show1{0%,22%{opacity:0}25%,42%{opacity:1}48%,100%{opacity:0}}
- @keyframes show2{0%,61%{opacity:0}65%,86%{opacity:1}92%,100%{opacity:0}}
- @keyframes armUp{0%,9%,20%,48%,58%,90%,100%{opacity:0}11%,18%,62%,84%{opacity:1}}
- @keyframes armDown{0%,10%,19%,49%,59%,91%,100%{opacity:1}11%,18%,62%,84%{opacity:0}}
- @keyframes cloud1{0%,22%{opacity:0;transform:translateY(16px)}26%,42%{opacity:1;transform:translateY(0)}48%,100%{opacity:0}}
- @keyframes cloud2{0%,61%{opacity:0;transform:translateY(16px)}66%,86%{opacity:1;transform:translateY(0)}92%,100%{opacity:0}}
+ .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+ .message{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:32px;letter-spacing:.3px;fill:#e8fff0;opacity:0}
+ #msg1{animation:m1 10s infinite} #msg2{animation:m2 10s infinite}
+ #armRest{animation:armRest 10s infinite} #armLift{animation:armLift 10s infinite}
+ #cigRest{animation:cigRest 10s infinite} #cigToMouth{animation:cigToMouth 10s infinite}
+ #embers{animation:ember 10s infinite}
+ #smoke1{animation:s1 10s infinite} #smoke2{animation:s2 10s infinite}
+ @keyframes armLift{0%,8%,30%,55%,100%{opacity:0}10%,26%,58%,76%{opacity:1}}
+ @keyframes armRest{0%,8%,30%,55%,100%{opacity:1}10%,26%,58%,76%{opacity:0}}
+ @keyframes cigToMouth{0%,8%,30%,55%,100%{opacity:0}10%,26%,58%,76%{opacity:1}}
+ @keyframes cigRest{0%,8%,30%,55%,100%{opacity:1}10%,26%,58%,76%{opacity:0}}
+ @keyframes ember{0%,12%,21%,60%,69%{opacity:.15}14%,18%,62%,66%{opacity:1}100%{opacity:.15}}
+ @keyframes m1{0%,14%{opacity:0}18%,29%{opacity:1}36%,100%{opacity:0}}
+ @keyframes m2{0%,61%{opacity:0}66%,77%{opacity:1}84%,100%{opacity:0}}
+ @keyframes s1{0%,13%{opacity:0;transform:translateY(9px)}18%,30%{opacity:1;transform:translateY(0)}36%,100%{opacity:0}}
+ @keyframes s2{0%,61%{opacity:0;transform:translateY(9px)}66%,78%{opacity:1;transform:translateY(0)}84%,100%{opacity:0}}
  </style>
 </defs>
-<rect width="960" height="340" rx="22" fill="url(#bg)"/>
-<path d="M28 300H932" stroke="#314252" stroke-width="3"/>
-<text x="42" y="38" class="mono" font-size="17" fill="#4ade80">$ ./late-night-session</text>
-<!-- desk -->
-<rect x="670" y="218" width="190" height="8" rx="4" fill="#405162"/>
-<path d="M720 215l10-94h110l12 94" fill="#1c2938" stroke="#61788b" stroke-width="3"/>
-<rect x="742" y="135" width="86" height="62" rx="5" fill="#07111b" stroke="#4ade80" stroke-width="2"/>
-<text x="759" y="174" class="mono" font-size="25" fill="#4ade80">&lt;/&gt;</text>
-<!-- cartoon body -->
-<path d="M180 300q5-105 86-125q90-18 135 125" fill="#202d42" stroke="#52647b" stroke-width="4"/>
-<path d="M228 220q-50 10-68 80" stroke="#b87958" stroke-width="24" stroke-linecap="round" fill="none"/>
-<path d="M335 217q40 20 48 67" stroke="#b87958" stroke-width="24" stroke-linecap="round" fill="none" id="armDown"/>
-<path d="M335 217q48-30 23-78" stroke="#b87958" stroke-width="24" stroke-linecap="round" fill="none" id="armUp"/>
-<circle cx="302" cy="132" r="66" fill="#b87958" stroke="#7b4e3d" stroke-width="4"/>
-<path d="M239 124q-6-78 65-82q72 2 75 75l-26-28-19 20-26-27-29 30-22-8z" fill="#17191f"/>
-<path d="M275 139q12-9 24 0m21 0q12-9 24 0" stroke="#3a2925" stroke-width="4" fill="none" stroke-linecap="round"/>
-<path d="M294 163q14 11 28 0" stroke="#71463a" stroke-width="3" fill="none" stroke-linecap="round"/>
-<path d="M350 130l25-5" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
-<circle cx="377" cy="124" r="4" fill="#fb6542" filter="url(#glow)"/>
-<!-- smoke clouds -->
-<g id="cloud1"><path d="M430 75q-8-30 28-34q10-37 57-20q31-27 58 0q40-13 51 23q40 4 32 42q-3 29-43 29H464q-37-1-34-40" fill="#d9e1e5"/><text x="535" y="76" text-anchor="middle" class="smoke">Hii, I'm Naveen</text></g>
-<g id="cloud2"><path d="M420 78q-8-30 28-34q10-37 57-20q31-27 58 0q40-13 51 23q40 4 32 42q-3 29-43 29H454q-37-1-34-40" fill="#d9e1e5"/><text x="533" y="65" text-anchor="middle" class="smoke" font-size="24">I may be slow</text><text x="533" y="96" text-anchor="middle" class="smoke" font-size="24">to reply</text></g>
-<text x="42" y="328" class="mono" font-size="14" fill="#8ca2b5">BUILD  •  LEARN  •  COMMIT  •  REPEAT</text>
+<rect width="1000" height="360" rx="20" fill="url(#bg)"/>
+<path d="M0 318H1000" stroke="#263747" stroke-width="2"/>
+<g opacity=".22" stroke="#4ade80" fill="none"><path d="M30 35h90v52H30zM42 51l12 8-12 8m19-8h35"/><path d="M900 50h60v38h-60zM912 64h35m-35 10h23"/></g>
+<text x="40" y="42" class="mono" font-size="16" fill="#4ade80">$ ./naveen --intro</text>
+<!-- desk, laptop and mug -->
+<path d="M70 288H930" stroke="#43566a" stroke-width="8" stroke-linecap="round"/>
+<path d="M690 284l14-90h150l14 90" fill="#1b2938" stroke="#60758b" stroke-width="3"/>
+<rect x="718" y="205" width="120" height="63" rx="7" fill="#07111a" stroke="#4ade80" stroke-width="2"/>
+<text x="739" y="245" class="mono" font-size="25" fill="#4ade80">&lt;/&gt;_</text>
+<path d="M875 281h50v-41q0-8-8-8h-34q-8 0-8 8z" fill="#172333" stroke="#8999a9" stroke-width="2"/>
+<path d="M925 245q25-3 18 18q-5 13-18 8" fill="none" stroke="#8999a9" stroke-width="4"/>
+<!-- character torso -->
+<path d="M180 318q0-107 76-133q87-31 150 9q45 32 56 124z" fill="url(#shirt)" stroke="#657b93" stroke-width="4"/>
+<path d="M261 204l-5 66 62 48 52-48-8-67" fill="#d4dbe2" opacity=".9"/>
+<!-- neck -->
+<path d="M292 177h57v47q-25 24-57 0z" fill="#a96f51"/>
+<!-- head -->
+<ellipse cx="322" cy="132" rx="73" ry="82" fill="#bd8463" stroke="#7b5140" stroke-width="3"/>
+<!-- hair -->
+<path d="M252 135q-20-92 67-111q72-13 92 51q10 29-4 67l-16-44-17-20-27 20-22-26-28 21-22-4z" fill="#15171d"/>
+<path d="M252 117q-19 4-17 30q1 17 14 23l7-29m145-30q20 9 14 32q-4 16-18 22" fill="#15171d"/>
+<!-- face expression -->
+<path d="M285 139q13-8 26 0m28 0q13-8 26 0" fill="none" stroke="#3a2a27" stroke-width="4" stroke-linecap="round"/>
+<path d="M326 144l-5 17 10 3" fill="none" stroke="#87543f" stroke-width="3" stroke-linecap="round"/>
+<path d="M307 178q16 11 32 0" fill="none" stroke="#713f39" stroke-width="4" stroke-linecap="round"/>
+<!-- hand resting at side -->
+<path id="armRest" d="M381 220q31 35 34 79" fill="none" stroke="#bd8463" stroke-width="24" stroke-linecap="round"/>
+<path id="handRest" d="M416 292q-4 18 8 24" fill="none" stroke="#bd8463" stroke-width="22" stroke-linecap="round"/>
+<!-- lifted arm -->
+<g id="armLift">
+ <path d="M380 220q45-8 32-58q-4-16-27-30" fill="none" stroke="#bd8463" stroke-width="24" stroke-linecap="round"/>
+ <path d="M382 132q-10-9-19-2" fill="none" stroke="#bd8463" stroke-width="20" stroke-linecap="round"/>
+</g>
+<!-- cigarettes: clearly moves with hand -->
+<g id="cigRest" transform="translate(423 306) rotate(-62)">
+ <rect x="-2" y="-17" width="5" height="35" rx="2" fill="#f4eee2"/><rect x="-2" y="-17" width="5" height="7" fill="#e65a4f"/>
+</g>
+<g id="cigToMouth" transform="translate(378 132) rotate(-8)">
+ <rect x="-2" y="-19" width="5" height="38" rx="2" fill="#f4eee2"/><rect x="-2" y="-19" width="5" height="8" fill="#e65a4f"/>
+</g>
+<circle id="embers" cx="381" cy="115" r="5" fill="#ff624d" filter="url(#soft)"/>
+<!-- smoke is animated text, not a speech cloud -->
+<g id="smoke1"><path d="M395 107q38-8 62-30q28-28 61-18" fill="none" stroke="#dce8e3" stroke-width="3" opacity=".55" stroke-linecap="round"/><text class="message" x="510" y="80">Hii, I'm Naveen</text></g>
+<g id="smoke2"><path d="M395 107q38-8 62-30q28-28 61-18" fill="none" stroke="#dce8e3" stroke-width="3" opacity=".55" stroke-linecap="round"/><text class="message" x="510" y="80">I may be slow to reply</text></g>
+<text id="msg1" class="message" x="510" y="80">Hii, I'm Naveen</text>
+<text id="msg2" class="message" x="510" y="80">I may be slow to reply</text>
+<text x="40" y="345" class="mono" font-size="14" fill="#7890a4">OPEN SOURCE ENTHUSIAST</text>
 </svg>
