@@ -24,35 +24,49 @@
 
 **Open source enthusiast**
 
-## 🧰 Tech stack & toolkit
-
-*Technologies I've used in coursework and hands-on projects, grouped by where they fit.*
+## 🧰 My favorite tools and technologies
 
 <div align="center">
 
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=python,java,c,cpp,js,ts,html,css&theme=dark" />
-
-**Frontend & backend**
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,nodejs,fastapi&theme=dark" />
-
-**Data & databases**
-
-<img src="https://skillicons.dev/icons?i=postgres,sqlite&theme=dark" />
-
-**Embedded, robotics & engineering**
-
-<img src="https://skillicons.dev/icons?i=raspberrypi,arduino,opencv,linux&theme=dark" />
-
-**Developer tools**
-
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman,apple&theme=dark" />
+<table>
+<tr>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=python&theme=dark" height="48" /><br/>Python</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=java&theme=dark" height="48" /><br/>Java</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=c&theme=dark" height="48" /><br/>C</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=cpp&theme=dark" height="48" /><br/>C++</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=javascript&theme=dark" height="48" /><br/>JavaScript</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=typescript&theme=dark" height="48" /><br/>TypeScript</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=html&theme=dark" height="48" /><br/>HTML</td>
+<td align="center" width="12.5%"><img src="https://skillicons.dev/icons?i=css&theme=dark" height="48" /><br/>CSS</td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=react&theme=dark" height="48" /><br/>React</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=nextjs&theme=dark" height="48" /><br/>Next.js</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=tailwind&theme=dark" height="48" /><br/>Tailwind CSS</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=nodejs&theme=dark" height="48" /><br/>Node.js</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=fastapi&theme=dark" height="48" /><br/>FastAPI</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" height="48" /><br/>PostgreSQL</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=sqlite&theme=dark" height="48" /><br/>SQLite</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=mongodb&theme=dark" height="48" /><br/>MongoDB</td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" height="48" /><br/>Raspberry Pi</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=arduino&theme=dark" height="48" /><br/>Arduino</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=opencv&theme=dark" height="48" /><br/>OpenCV</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=linux&theme=dark" height="48" /><br/>Linux</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=git&theme=dark" height="48" /><br/>Git</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=github&theme=dark" height="48" /><br/>GitHub</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=vscode&theme=dark" height="48" /><br/>VS Code</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=postman&theme=dark" height="48" /><br/>Postman</td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=apple&theme=dark" height="48" /><br/>Apple</td>
+<td align="center"><img src="https://img.shields.io/badge/🤖-CoppeliaSim-20232A?style=for-the-badge" height="48" /><br/>CoppeliaSim</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
 
 </div>
-
-
 
 ## 📊 GitHub stats & activity
 
