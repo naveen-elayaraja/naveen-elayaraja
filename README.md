@@ -71,6 +71,8 @@
 
 <img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/output/github-contribution-grid-snake.svg" alt="Red snake eating the GitHub contribution graph" />
 
+**This snake survives on my late-night commits.**
+
 </div>
 
 ## ☕ Let's build something worth staying up for
