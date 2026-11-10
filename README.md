@@ -67,11 +67,7 @@
 
 </div>
 
-## 🐍 The snake runs on late-night commits
-
 <div align="center">
-
-**This snake survives on my late-night commits.**
 
 <img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/output/github-contribution-grid-snake.svg" alt="Red snake eating the GitHub contribution graph" />
 
