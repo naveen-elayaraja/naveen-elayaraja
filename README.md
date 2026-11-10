@@ -58,12 +58,12 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=naveen-elayaraja&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github" alt="Naveen's GitHub statistics" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=naveen-elayaraja&layout=compact&hide_border=true&theme=github_dark&langs_count=8" alt="Most used languages" />
+<img height="165" src="assets/github-stats.svg" alt="Naveen's GitHub statistics" />
+<img height="165" src="assets/top-languages.svg" alt="Most used languages" />
 
 <img src="https://streak-stats.demolab.com?user=naveen-elayaraja&theme=github-dark-blue&hide_border=true" alt="GitHub contribution streak" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=naveen-elayaraja&theme=github-compact&hide_border=true&area=true" alt="GitHub activity graph" />
+<img src="assets/activity-graph.svg" alt="GitHub activity graph" />
 
 </div>
 
