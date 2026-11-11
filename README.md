@@ -7,8 +7,6 @@
 
 <img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/sleepy-smoker.gif?v=1" alt="Standing cartoon developer holding a laptop and cigarette, taking two puffs as messages appear, with eight rats running across the floor" width="100%" />
 
-# Hey, I'm Naveen Karthikeyan E 👋
-
 **Computer Science student · Developer · Open-source enthusiast**
 
 **IIT-M x VIT**
@@ -62,7 +60,8 @@
 <tr>
 <td align="center"><img src="https://skillicons.dev/icons?i=apple&theme=dark" height="48" /><br/>Apple</td>
 <td align="center"><img src="https://img.shields.io/badge/🤖-CoppeliaSim-20232A?style=for-the-badge" height="48" /><br/>CoppeliaSim</td>
-<td></td><td></td><td></td><td></td><td></td><td></td>
+<td align="center"><img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" height="48" /><br/>Ubuntu</td>
+<td></td><td></td><td></td><td></td><td></td>
 </tr>
 </table>
 
