@@ -32,7 +32,7 @@
 <g class="appear" style="animation-delay:.15s">
   <rect class="card" x="32" y="105" width="282" height="150" rx="18"/>
   <text class="muted" x="56" y="139">PUBLIC REPOSITORIES</text>
-  <text class="value" x="56" y="198">{{PUBLIC_REPOS}}</text>
+  <text class="value" x="56" y="198">6</text>
   <text class="small" x="56" y="226">Projects on GitHub</text>
   <circle cx="256" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
   <circle cx="256" cy="179" r="34" fill="none" stroke="url(#cyan)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 256 179)" class="sweep" filter="url(#glow)"/>
@@ -41,7 +41,7 @@
 <g class="appear" style="animation-delay:.55s">
   <rect class="card" x="339" y="105" width="282" height="150" rx="18"/>
   <text class="muted" x="363" y="139">FOLLOWERS</text>
-  <text class="value" x="363" y="198">{{FOLLOWERS}}</text>
+  <text class="value" x="363" y="198">19</text>
   <text class="small" x="363" y="226">People following your work</text>
   <circle cx="563" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
   <circle cx="563" cy="179" r="34" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 563 179)" class="sweep" style="animation-delay:.45s" filter="url(#glow)"/>
@@ -50,7 +50,7 @@
 <g class="appear" style="animation-delay:.95s">
   <rect class="card" x="646" y="105" width="282" height="150" rx="18"/>
   <text class="muted" x="670" y="139">PULL REQUESTS OPENED</text>
-  <text class="value" x="670" y="198">{{PRS_OPENED}}</text>
+  <text class="value" x="670" y="198">1</text>
   <text class="small" x="670" y="226">Across public repositories</text>
   <circle cx="870" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
   <circle cx="870" cy="179" r="34" fill="none" stroke="url(#cyan)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 870 179)" class="sweep" style="animation-delay:.85s" filter="url(#glow)"/>
@@ -62,11 +62,11 @@
   <text class="small" x="58" y="341">Your public contributions to open source</text>
   <circle cx="166" cy="431" r="62" fill="none" stroke="#2b3b61" stroke-width="16"/>
   <circle cx="166" cy="431" r="62" fill="none" stroke="#63e0d0" stroke-width="16" stroke-linecap="round" stroke-dasharray="390" stroke-dashoffset="390" transform="rotate(-90 166 431)" class="sweep" style="animation-delay:1.6s"/>
-  <text x="166" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">{{PRS_OPENED}}</text>
+  <text x="166" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">1</text>
   <text x="166" y="449" text-anchor="middle" class="small">opened</text>
   <circle cx="332" cy="431" r="62" fill="none" stroke="#2b3b61" stroke-width="16"/>
   <circle cx="332" cy="431" r="62" fill="none" stroke="#9a83ff" stroke-width="16" stroke-linecap="round" stroke-dasharray="390" stroke-dashoffset="390" transform="rotate(-90 332 431)" class="sweep" style="animation-delay:1.9s"/>
-  <text x="332" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">{{PRS_MERGED}}</text>
+  <text x="332" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">0</text>
   <text x="332" y="449" text-anchor="middle" class="small">merged</text>
 </g>
 <g class="appear" style="animation-delay:1.8s">
@@ -82,7 +82,7 @@
     <rect class="bar" x="660" y="371" width="24" height="95" rx="5" style="animation-delay:2.32s"/>
     <rect class="bar" x="695" y="390" width="24" height="76" rx="5" style="animation-delay:2.4s"/>
   </g>
-  <text class="small" x="520" y="490">{{PUBLIC_REPOS}} public repositories</text>
+  <text class="small" x="520" y="490">6 public repositories</text>
   <rect x="520" y="502" width="370" height="5" rx="2.5" fill="#2b3b61"/>
   <rect x="520" y="502" width="0" height="5" rx="2.5" fill="#63e0d0"><animate attributeName="width" from="0" to="370" dur="1.2s" begin="2.2s" fill="freeze"/></rect>
 </g>
