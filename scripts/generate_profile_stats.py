@@ -58,6 +58,20 @@ for i, (label, value) in enumerate(metrics):
     parts.append(f'<text x="{x}" y="{y}" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">{label}</text><text x="{x}" y="{y+25}" fill="#f0f6fc" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">{value}</text>')
 (OUT / "github-stats.svg").write_text(svg_card("GitHub overview", "Live public-account metrics · updated daily", "".join(parts), height=250), encoding="utf-8")
 
+# Refresh the animated dashboard's displayed values while preserving its SVG animations.
+dashboard_path = OUT / "github-dashboard.svg"
+if dashboard_path.exists():
+    dashboard = dashboard_path.read_text(encoding="utf-8")
+    replacements = {
+        "{{PUBLIC_REPOS}}": str(user.get("public_repos", 0)),
+        "{{FOLLOWERS}}": str(user.get("followers", 0)),
+        "{{PRS_OPENED}}": "—" if prs_opened is None else str(prs_opened),
+        "{{PRS_MERGED}}": "—" if prs_merged is None else str(prs_merged),
+    }
+    for placeholder, value in replacements.items():
+        dashboard = dashboard.replace(placeholder, escape(value))
+    dashboard_path.write_text(dashboard, encoding="utf-8")
+
 language_bytes = Counter()
 for repo in repos:
     if repo.get("size", 0) == 0:
