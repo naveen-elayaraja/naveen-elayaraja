@@ -10,7 +10,7 @@
 <p>
   <img src="https://komarev.com/ghpvc/?username=naveen-elayaraja&style=for-the-badge&color=blueviolet&label=PROFILE+VIEWS" alt="Profile views" />
   <img src="https://img.shields.io/github/followers/naveen-elayaraja?style=for-the-badge&logo=github&label=FOLLOWERS" alt="GitHub followers" />
-  <img src="https://img.shields.io/github/stars/naveen-elayaraja?style=for-the-badge&logo=github&label=REPOSITORY+STARS" alt="Repository stars" />
+  <img src="https://img.shields.io/github/stars/naveen-elayaraja/naveen-elayaraja?style=for-the-badge&logo=github&label=PROFILE+REPO+STARS" alt="Repository stars" />
 </p>
 
 **Computer Science student · Developer · Open-source enthusiast**
