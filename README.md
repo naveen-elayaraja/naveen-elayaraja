@@ -77,7 +77,7 @@
 
 <div align="center">
 
-<img src="assets/github-stats.svg" alt="Naveen's GitHub statistics" />
+<img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/github-dashboard.svg" width="100%" alt="Animated GitHub activity dashboard with sequential metric reveals and circular progress animations" />
 <img src="assets/top-languages.svg" alt="Most used languages" />
 
 <img src="https://streak-stats.demolab.com?user=naveen-elayaraja&theme=github-dark-blue&hide_border=true" alt="GitHub contribution streak" />
