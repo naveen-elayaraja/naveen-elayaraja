@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate self-hosted GitHub profile cards from the public GitHub REST API."""
-import json, os, urllib.request, urllib.error
+import json, os, urllib.request, urllib.error, urllib.parse
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,18 +31,32 @@ repos = get(f"https://api.github.com/users/{USER}/repos?per_page=100&sort=update
 repos = [r for r in repos if not r.get("fork")]
 stars = sum(r.get("stargazers_count", 0) for r in repos)
 forks = sum(r.get("forks_count", 0) for r in repos)
+
+# Search API totals include public pull requests authored by this account.
+# Keep PRs separate from commits: one pull request may contain multiple commits.
+def search_pr_count(filters):
+    query = urllib.parse.quote(f"author:{USER} type:pr {filters}".strip())
+    try:
+        return get(f"https://api.github.com/search/issues?q={query}&per_page=1").get("total_count", 0)
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError):
+        return None
+
+prs_opened = search_pr_count("")
+prs_merged = search_pr_count("is:merged")
 metrics = [
     ("PUBLIC REPOSITORIES", str(user.get("public_repos", 0))),
     ("FOLLOWERS", str(user.get("followers", 0))),
     ("STARS EARNED", str(stars)),
     ("FORKS", str(forks)),
+    ("PULL REQUESTS", "—" if prs_opened is None else str(prs_opened)),
+    ("PRS MERGED", "—" if prs_merged is None else str(prs_merged)),
 ]
 parts = []
 for i, (label, value) in enumerate(metrics):
     x = 24 + (i % 2) * 232
-    y = 100 + (i // 2) * 58
+    y = 96 + (i // 2) * 52
     parts.append(f'<text x="{x}" y="{y}" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">{label}</text><text x="{x}" y="{y+25}" fill="#f0f6fc" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">{value}</text>')
-(OUT / "github-stats.svg").write_text(svg_card("GitHub overview", "Live public-account metrics · updated daily", "".join(parts), height=190), encoding="utf-8")
+(OUT / "github-stats.svg").write_text(svg_card("GitHub overview", "Live public-account metrics · updated daily", "".join(parts), height=250), encoding="utf-8")
 
 language_bytes = Counter()
 for repo in repos:
