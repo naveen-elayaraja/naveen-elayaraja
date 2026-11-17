@@ -30,7 +30,7 @@
 <g class="appear" style="animation-delay:.15s">
  <rect class="panel" x="28" y="105" width="212" height="142" rx="15"/>
  <text class="muted" x="48" y="137">PUBLIC REPOSITORIES</text>
- <text class="value" x="48" y="190">{{PUBLIC_REPOS}}</text>
+ <text class="value" x="48" y="190">7</text>
  <text class="small" x="48" y="219">Projects on GitHub</text>
  <circle cx="205" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
  <circle cx="205" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 205 181)" class="ring" filter="url(#glow)"/>
@@ -39,7 +39,7 @@
 <g class="appear" style="animation-delay:.5s">
  <rect class="panel" x="263" y="105" width="212" height="142" rx="15"/>
  <text class="muted" x="283" y="137">STARS EARNED</text>
- <text class="value" x="283" y="190">{{STARS_EARNED}}</text>
+ <text class="value" x="283" y="190">0</text>
  <text class="small" x="283" y="219">Across original public repos</text>
  <circle cx="440" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
  <circle cx="440" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 440 181)" class="ring" style="animation-delay:.35s" filter="url(#glow)"/>
@@ -48,7 +48,7 @@
 <g class="appear" style="animation-delay:.85s">
  <rect class="panel" x="498" y="105" width="212" height="142" rx="15"/>
  <text class="muted" x="518" y="137">FOLLOWERS</text>
- <text class="value" x="518" y="190">{{FOLLOWERS}}</text>
+ <text class="value" x="518" y="190">20</text>
  <text class="small" x="518" y="219">People following your work</text>
  <circle cx="675" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
  <circle cx="675" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 675 181)" class="ring" style="animation-delay:.7s" filter="url(#glow)"/>
@@ -57,7 +57,7 @@
 <g class="appear" style="animation-delay:1.2s">
  <rect class="panel" x="733" y="105" width="199" height="142" rx="15"/>
  <text class="muted" x="753" y="137">MERGED PRs</text>
- <text class="value" x="753" y="190">{{PRS_MERGED}}</text>
+ <text class="value" x="753" y="190">3</text>
  <text class="small" x="753" y="219">Open-source contributions</text>
  <circle cx="897" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
  <circle cx="897" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 897 181)" class="ring" style="animation-delay:1.05s" filter="url(#glow)"/>
@@ -69,11 +69,11 @@
  <text class="small" x="54" y="333">Your public and verified private PR activity</text>
  <circle cx="160" cy="400" r="49" fill="none" stroke="#30363d" stroke-width="13"/>
  <circle cx="160" cy="400" r="49" fill="none" stroke="#3fb950" stroke-width="13" stroke-linecap="round" stroke-dasharray="308" stroke-dashoffset="308" transform="rotate(-90 160 400)" class="ring" style="animation-delay:1.8s" filter="url(#glow)"/>
- <text x="160" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">{{PRS_OPENED}}</text>
+ <text x="160" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">3</text>
  <text x="160" y="438" text-anchor="middle" class="small">opened</text>
  <circle cx="335" cy="400" r="49" fill="none" stroke="#30363d" stroke-width="13"/>
  <circle cx="335" cy="400" r="49" fill="none" stroke="#56d364" stroke-width="13" stroke-linecap="round" stroke-dasharray="308" stroke-dashoffset="308" transform="rotate(-90 335 400)" class="ring" style="animation-delay:2.1s" filter="url(#glow)"/>
- <text x="335" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">{{PRS_MERGED}}</text>
+ <text x="335" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">3</text>
  <text x="335" y="438" text-anchor="middle" class="small">merged</text>
 </g>
 <g class="appear" style="animation-delay:1.9s">
