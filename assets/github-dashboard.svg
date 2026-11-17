@@ -1,90 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="title desc">
 <title id="title">Naveen's animated GitHub dashboard</title>
-<desc id="desc">Animated GitHub profile metrics showing six public repositories, nineteen followers, one pull request opened, and zero merged pull requests.</desc>
+<desc id="desc">Animated GitHub profile statistics in GitHub's dark and green palette.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111a38"/><stop offset="1" stop-color="#102c46"/></linearGradient>
-  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#62e5d4"/><stop offset="1" stop-color="#4b8cff"/></linearGradient>
-  <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b7bff"/><stop offset="1" stop-color="#ec70d7"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#56d364"/><stop offset="1" stop-color="#238636"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <style>
-    .card{fill:#172344;stroke:#34466f;stroke-width:1.2}
-    .muted{fill:#94a5ca;font:600 13px 'Segoe UI',Arial,sans-serif;letter-spacing:.5px}
-    .value{fill:#f2f5ff;font:700 43px 'Segoe UI',Arial,sans-serif}
-    .small{fill:#b8c5e3;font:13px 'Segoe UI',Arial,sans-serif}
-    .heading{fill:#f2f5ff;font:700 21px 'Segoe UI',Arial,sans-serif}
-    .appear{opacity:0;transform:translateY(12px);animation:appear .8s ease-out forwards}
+    .panel{fill:#161b22;stroke:#30363d;stroke-width:1.4}
+    .muted{fill:#8b949e;font:600 13px 'Segoe UI',Arial,sans-serif;letter-spacing:.5px}
+    .value{fill:#f0f6fc;font:700 40px 'Segoe UI',Arial,sans-serif}
+    .small{fill:#c9d1d9;font:13px 'Segoe UI',Arial,sans-serif}
+    .heading{fill:#f0f6fc;font:700 22px 'Segoe UI',Arial,sans-serif}
+    .appear{opacity:0;transform:translateY(12px);animation:appear .75s ease-out forwards}
     @keyframes appear{to{opacity:1;transform:translateY(0)}}
-    .sweep{stroke-dasharray:188.5;stroke-dashoffset:188.5;animation:sweep 1.8s ease-out forwards}
-    @keyframes sweep{to{stroke-dashoffset:0}}
-    .pulse{transform-origin:center;animation:pulse 2.4s ease-in-out infinite}
+    .ring{stroke-dasharray:188.5;stroke-dashoffset:188.5;animation:ring 1.7s ease-out forwards}
+    @keyframes ring{to{stroke-dashoffset:0}}
+    .pulse{transform-origin:center;animation:pulse 2.2s ease-in-out infinite}
     @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
-    .bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .75s cubic-bezier(.2,.8,.2,1) forwards}
+    .bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .8s cubic-bezier(.2,.8,.2,1) forwards}
     @keyframes grow{to{transform:scaleY(1)}}
   </style>
 </defs>
-<rect width="960" height="560" rx="24" fill="#0b1224"/>
-<rect x="1" y="1" width="958" height="558" rx="23" fill="url(#bg)" stroke="#314366" stroke-width="2"/>
-<circle cx="900" cy="35" r="120" fill="#4b65b8" opacity=".08"/>
-<circle cx="80" cy="500" r="150" fill="#35c9c2" opacity=".05"/>
-<text x="42" y="42" fill="#70c9ff" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">NAVEEN KARTHIKEYAN E</text>
-<text x="42" y="78" class="heading" font-size="27">GitHub activity dashboard</text>
-<text x="918" y="45" text-anchor="end" class="muted">PROFILE SNAPSHOT</text>
+<rect width="960" height="500" rx="22" fill="#0d1117"/>
+<rect x="1" y="1" width="958" height="498" rx="21" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+<circle cx="875" cy="40" r="125" fill="#238636" opacity=".08"/>
+<circle cx="60" cy="470" r="120" fill="#3fb950" opacity=".035"/>
+<text x="38" y="40" fill="#3fb950" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2">NAVEEN KARTHIKEYAN E</text>
+<text x="38" y="76" class="heading" font-size="27">GitHub activity dashboard</text>
+<text x="920" y="42" text-anchor="end" class="muted">LIVE PROFILE SNAPSHOT</text>
 <g class="appear" style="animation-delay:.15s">
-  <rect class="card" x="32" y="105" width="282" height="150" rx="18"/>
-  <text class="muted" x="56" y="139">PUBLIC REPOSITORIES</text>
-  <text class="value" x="56" y="198">6</text>
-  <text class="small" x="56" y="226">Projects on GitHub</text>
-  <circle cx="256" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
-  <circle cx="256" cy="179" r="34" fill="none" stroke="url(#cyan)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 256 179)" class="sweep" filter="url(#glow)"/>
-  <circle cx="256" cy="179" r="5" fill="#eaf7ff" class="pulse"/>
+ <rect class="panel" x="28" y="105" width="212" height="142" rx="15"/>
+ <text class="muted" x="48" y="137">PUBLIC REPOSITORIES</text>
+ <text class="value" x="48" y="190">{{PUBLIC_REPOS}}</text>
+ <text class="small" x="48" y="219">Projects on GitHub</text>
+ <circle cx="205" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
+ <circle cx="205" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 205 181)" class="ring" filter="url(#glow)"/>
+ <circle cx="205" cy="181" r="4" fill="#aff5b4" class="pulse"/>
 </g>
-<g class="appear" style="animation-delay:.55s">
-  <rect class="card" x="339" y="105" width="282" height="150" rx="18"/>
-  <text class="muted" x="363" y="139">FOLLOWERS</text>
-  <text class="value" x="363" y="198">19</text>
-  <text class="small" x="363" y="226">People following your work</text>
-  <circle cx="563" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
-  <circle cx="563" cy="179" r="34" fill="none" stroke="url(#violet)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 563 179)" class="sweep" style="animation-delay:.45s" filter="url(#glow)"/>
-  <circle cx="563" cy="179" r="5" fill="#eaf7ff" class="pulse"/>
+<g class="appear" style="animation-delay:.5s">
+ <rect class="panel" x="263" y="105" width="212" height="142" rx="15"/>
+ <text class="muted" x="283" y="137">STARS EARNED</text>
+ <text class="value" x="283" y="190">{{STARS_EARNED}}</text>
+ <text class="small" x="283" y="219">Across original public repos</text>
+ <circle cx="440" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
+ <circle cx="440" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 440 181)" class="ring" style="animation-delay:.35s" filter="url(#glow)"/>
+ <circle cx="440" cy="181" r="4" fill="#aff5b4" class="pulse"/>
 </g>
-<g class="appear" style="animation-delay:.95s">
-  <rect class="card" x="646" y="105" width="282" height="150" rx="18"/>
-  <text class="muted" x="670" y="139">PULL REQUESTS OPENED</text>
-  <text class="value" x="670" y="198">1</text>
-  <text class="small" x="670" y="226">Across public repositories</text>
-  <circle cx="870" cy="179" r="34" fill="none" stroke="#2b3b61" stroke-width="9"/>
-  <circle cx="870" cy="179" r="34" fill="none" stroke="url(#cyan)" stroke-width="9" stroke-linecap="round" transform="rotate(-90 870 179)" class="sweep" style="animation-delay:.85s" filter="url(#glow)"/>
-  <circle cx="870" cy="179" r="5" fill="#eaf7ff" class="pulse"/>
+<g class="appear" style="animation-delay:.85s">
+ <rect class="panel" x="498" y="105" width="212" height="142" rx="15"/>
+ <text class="muted" x="518" y="137">FOLLOWERS</text>
+ <text class="value" x="518" y="190">{{FOLLOWERS}}</text>
+ <text class="small" x="518" y="219">People following your work</text>
+ <circle cx="675" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
+ <circle cx="675" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 675 181)" class="ring" style="animation-delay:.7s" filter="url(#glow)"/>
+ <circle cx="675" cy="181" r="4" fill="#aff5b4" class="pulse"/>
 </g>
-<g class="appear" style="animation-delay:1.4s">
-  <rect class="card" x="32" y="278" width="438" height="242" rx="18"/>
-  <text class="heading" x="58" y="316">Pull request activity</text>
-  <text class="small" x="58" y="341">Your public contributions to open source</text>
-  <circle cx="166" cy="431" r="62" fill="none" stroke="#2b3b61" stroke-width="16"/>
-  <circle cx="166" cy="431" r="62" fill="none" stroke="#63e0d0" stroke-width="16" stroke-linecap="round" stroke-dasharray="390" stroke-dashoffset="390" transform="rotate(-90 166 431)" class="sweep" style="animation-delay:1.6s"/>
-  <text x="166" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">1</text>
-  <text x="166" y="449" text-anchor="middle" class="small">opened</text>
-  <circle cx="332" cy="431" r="62" fill="none" stroke="#2b3b61" stroke-width="16"/>
-  <circle cx="332" cy="431" r="62" fill="none" stroke="#9a83ff" stroke-width="16" stroke-linecap="round" stroke-dasharray="390" stroke-dashoffset="390" transform="rotate(-90 332 431)" class="sweep" style="animation-delay:1.9s"/>
-  <text x="332" y="427" text-anchor="middle" fill="#f2f5ff" font-size="35" font-weight="700">0</text>
-  <text x="332" y="449" text-anchor="middle" class="small">merged</text>
+<g class="appear" style="animation-delay:1.2s">
+ <rect class="panel" x="733" y="105" width="199" height="142" rx="15"/>
+ <text class="muted" x="753" y="137">MERGED PRs</text>
+ <text class="value" x="753" y="190">{{PRS_MERGED}}</text>
+ <text class="small" x="753" y="219">Open-source contributions</text>
+ <circle cx="897" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
+ <circle cx="897" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 897 181)" class="ring" style="animation-delay:1.05s" filter="url(#glow)"/>
+ <circle cx="897" cy="181" r="4" fill="#aff5b4" class="pulse"/>
 </g>
-<g class="appear" style="animation-delay:1.8s">
-  <rect class="card" x="494" y="278" width="434" height="242" rx="18"/>
-  <text class="heading" x="520" y="316">Open-source journey</text>
-  <text class="small" x="520" y="341">A growing collection of work and learning</text>
-  <text class="muted" x="520" y="388">PUBLIC REPOSITORIES</text>
-  <g fill="url(#cyan)">
-    <rect class="bar" x="520" y="408" width="24" height="58" rx="5" style="animation-delay:2s"/>
-    <rect class="bar" x="555" y="397" width="24" height="69" rx="5" style="animation-delay:2.08s"/>
-    <rect class="bar" x="590" y="382" width="24" height="84" rx="5" style="animation-delay:2.16s"/>
-    <rect class="bar" x="625" y="405" width="24" height="61" rx="5" style="animation-delay:2.24s"/>
-    <rect class="bar" x="660" y="371" width="24" height="95" rx="5" style="animation-delay:2.32s"/>
-    <rect class="bar" x="695" y="390" width="24" height="76" rx="5" style="animation-delay:2.4s"/>
-  </g>
-  <text class="small" x="520" y="490">6 public repositories</text>
-  <rect x="520" y="502" width="370" height="5" rx="2.5" fill="#2b3b61"/>
-  <rect x="520" y="502" width="0" height="5" rx="2.5" fill="#63e0d0"><animate attributeName="width" from="0" to="370" dur="1.2s" begin="2.2s" fill="freeze"/></rect>
+<g class="appear" style="animation-delay:1.55s">
+ <rect class="panel" x="28" y="270" width="430" height="195" rx="16"/>
+ <text class="heading" x="54" y="308">Pull request milestones</text>
+ <text class="small" x="54" y="333">Your public and verified private PR activity</text>
+ <circle cx="160" cy="400" r="49" fill="none" stroke="#30363d" stroke-width="13"/>
+ <circle cx="160" cy="400" r="49" fill="none" stroke="#3fb950" stroke-width="13" stroke-linecap="round" stroke-dasharray="308" stroke-dashoffset="308" transform="rotate(-90 160 400)" class="ring" style="animation-delay:1.8s" filter="url(#glow)"/>
+ <text x="160" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">{{PRS_OPENED}}</text>
+ <text x="160" y="438" text-anchor="middle" class="small">opened</text>
+ <circle cx="335" cy="400" r="49" fill="none" stroke="#30363d" stroke-width="13"/>
+ <circle cx="335" cy="400" r="49" fill="none" stroke="#56d364" stroke-width="13" stroke-linecap="round" stroke-dasharray="308" stroke-dashoffset="308" transform="rotate(-90 335 400)" class="ring" style="animation-delay:2.1s" filter="url(#glow)"/>
+ <text x="335" y="405" text-anchor="middle" fill="#f0f6fc" font-size="31" font-weight="700">{{PRS_MERGED}}</text>
+ <text x="335" y="438" text-anchor="middle" class="small">merged</text>
 </g>
-<text x="42" y="545" fill="#7f92ba" font-family="Segoe UI,Arial,sans-serif" font-size="11">github.com/naveen-elayaraja  •  Public GitHub data</text>
+<g class="appear" style="animation-delay:1.9s">
+ <rect class="panel" x="480" y="270" width="452" height="195" rx="16"/>
+ <text class="heading" x="506" y="308">Open-source footprint</text>
+ <text class="small" x="506" y="333">A snapshot of your work across GitHub</text>
+ <text class="muted" x="506" y="372">PUBLIC REPOSITORIES</text>
+ <rect x="506" y="383" width="394" height="9" rx="4.5" fill="#30363d"/>
+ <rect x="506" y="383" width="0" height="9" rx="4.5" fill="url(#green)"><animate attributeName="width" from="0" to="394" dur="1.3s" begin="2.2s" fill="freeze"/></rect>
+ <g fill="url(#green)">
+  <rect class="bar" x="506" y="417" width="20" height="25" rx="4" style="animation-delay:2.15s"/>
+  <rect class="bar" x="535" y="405" width="20" height="37" rx="4" style="animation-delay:2.22s"/>
+  <rect class="bar" x="564" y="412" width="20" height="30" rx="4" style="animation-delay:2.29s"/>
+  <rect class="bar" x="593" y="396" width="20" height="46" rx="4" style="animation-delay:2.36s"/>
+  <rect class="bar" x="622" y="408" width="20" height="34" rx="4" style="animation-delay:2.43s"/>
+  <rect class="bar" x="651" y="391" width="20" height="51" rx="4" style="animation-delay:2.5s"/>
+  <rect class="bar" x="680" y="401" width="20" height="41" rx="4" style="animation-delay:2.57s"/>
+ </g>
+ <text class="small" x="725" y="426">Live data refreshed daily</text>
+</g>
+<text x="38" y="486" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">github.com/naveen-elayaraja  •  GitHub dark + contribution green</text>
 </svg>
