@@ -22,7 +22,7 @@ def get(url):
 def svg_card(title, subtitle, body, width=495, height=190):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
 <rect x="1" y="1" width="{width-2}" height="{height-2}" rx="12" fill="#0d1117" stroke="#30363d"/>
-<text x="24" y="34" fill="#58a6ff" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">{escape(title)}</text>
+<text x="24" y="34" fill="#3fb950" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">{escape(title)}</text>
 <text x="24" y="56" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">{escape(subtitle)}</text>
 {body}</svg>'''
 
@@ -41,8 +41,14 @@ def search_pr_count(filters):
     except (urllib.error.URLError, TimeoutError, ValueError, KeyError):
         return None
 
-prs_opened = search_pr_count("")
-prs_merged = search_pr_count("is:merged")
+# The profile workflow token can search public PRs, but cannot enumerate the
+# one verified PR in the user's private eYantra repository. Add that verified
+# private PR to both totals so the public profile reflects the complete count.
+PRIVATE_PR_ADJUSTMENT = 1
+public_prs_opened = search_pr_count("")
+public_prs_merged = search_pr_count("is:merged")
+prs_opened = None if public_prs_opened is None else public_prs_opened + PRIVATE_PR_ADJUSTMENT
+prs_merged = None if public_prs_merged is None else public_prs_merged + PRIVATE_PR_ADJUSTMENT
 metrics = [
     ("PUBLIC REPOSITORIES", str(user.get("public_repos", 0))),
     ("FOLLOWERS", str(user.get("followers", 0))),
@@ -65,6 +71,7 @@ if dashboard_path.exists():
     replacements = {
         "{{PUBLIC_REPOS}}": str(user.get("public_repos", 0)),
         "{{FOLLOWERS}}": str(user.get("followers", 0)),
+        "{{STARS_EARNED}}": str(stars),
         "{{PRS_OPENED}}": "—" if prs_opened is None else str(prs_opened),
         "{{PRS_MERGED}}": "—" if prs_merged is None else str(prs_merged),
     }
