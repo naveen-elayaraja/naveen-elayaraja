@@ -103,12 +103,14 @@ if not top:
 
 # GitHub's public events feed gives a recent activity snapshot (not lifetime commits).
 events = get(f"https://api.github.com/users/{USER}/events/public?per_page=100")
-today = datetime.now(timezone.utc).date()
+# Render activity dates in the account owner's local timezone (India Standard Time).
+LOCAL_TZ = timezone(timedelta(hours=5, minutes=30))
+today = datetime.now(LOCAL_TZ).date()
 days = [today - timedelta(days=i) for i in range(29, -1, -1)]
 counts = Counter()
 for event in events:
     try:
-        day = datetime.fromisoformat(event["created_at"].replace("Z", "+00:00")).date()
+        day = datetime.fromisoformat(event["created_at"].replace("Z", "+00:00")).astimezone(LOCAL_TZ).date()
         if day in days:
             counts[day] += 1
     except (KeyError, ValueError):
@@ -122,6 +124,6 @@ for i, day in enumerate(days):
     bars.append(f'<rect x="{x}" y="{112-h:.1f}" width="8" height="{h:.1f}" rx="2" fill="{ "#3fb950" if count else "#30363d" }"><title>{day.isoformat()}: {count} public events</title></rect>')
 bars.append(f'<text x="25" y="137" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">{days[0].strftime("%b %d")}</text>')
 bars.append(f'<text x="430" y="137" text-anchor="end" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">{today.strftime("%b %d")}</text>')
-bars.append('<text x="24" y="160" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">Recent public GitHub events · not a complete contribution count</text>')
+bars.append('<text x="24" y="160" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">Recent public GitHub events · IST · not a complete contribution count</text>')
 (OUT / "activity-graph.svg").write_text(svg_card("Recent GitHub activity", "Daily public-event activity over the last 30 days", "".join(bars), width=495, height=180), encoding="utf-8")
 print("Generated GitHub stats, language, and activity SVG cards.")
