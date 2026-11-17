@@ -77,10 +77,11 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/github-dashboard.svg" width="100%" alt="Animated GitHub activity dashboard with sequential metric reveals and circular progress animations" />
-<img src="assets/top-languages.svg" alt="Most used languages" />
+<img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/github-dashboard.svg" width="100%" alt="Animated GitHub activity dashboard in GitHub dark and green theme" />
+<img src="assets/github-stats.svg" alt="GitHub profile statistics including repositories, followers, stars, forks and pull requests" />
+<img src="assets/top-languages.svg" alt="Most used languages across public original repositories" />
 
-<img src="https://streak-stats.demolab.com?user=naveen-elayaraja&theme=github-dark-blue&hide_border=true" alt="GitHub contribution streak" />
+<img src="https://streak-stats.demolab.com?user=naveen-elayaraja&theme=github-dark&hide_border=true" alt="GitHub contribution streak" />
 
 <img src="assets/activity-graph.svg" alt="GitHub activity graph" />
 
