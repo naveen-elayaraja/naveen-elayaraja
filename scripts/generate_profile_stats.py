@@ -66,7 +66,8 @@ for i, (label, value) in enumerate(metrics):
     parts.append(f'<text x="{x}" y="{y}" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">{label}</text><text x="{x}" y="{y+25}" fill="#f0f6fc" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">{value}</text>')
 (OUT / "github-stats.svg").write_text(svg_card("GitHub overview", f"Live public-account metrics · {REFRESH_LABEL}", "".join(parts), height=250), encoding="utf-8")
 
-# Refresh the animated dashboard's displayed values while preserving its SVG animations.
+# Refresh all animated dashboard metrics from the same API snapshot as the static cards.
+# Keep dynamic values as placeholders in the SVG so future refreshes cannot go stale.
 dashboard_path = OUT / "github-dashboard.svg"
 if dashboard_path.exists():
     dashboard = dashboard_path.read_text(encoding="utf-8")
