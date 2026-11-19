@@ -48,7 +48,7 @@
 <g class="appear" style="animation-delay:.85s">
  <rect class="panel" x="498" y="105" width="212" height="142" rx="15"/>
  <text class="muted" x="518" y="137">FOLLOWERS</text>
- <text class="value" x="518" y="190">{{FOLLOWERS}}</text>
+ <text class="value" x="518" y="190">21</text>
  <text class="small" x="518" y="219">People following your work</text>
  <circle cx="675" cy="181" r="24" fill="none" stroke="#30363d" stroke-width="7"/>
  <circle cx="675" cy="181" r="24" fill="none" stroke="url(#green)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 675 181)" class="ring" style="animation-delay:.7s" filter="url(#glow)"/>
