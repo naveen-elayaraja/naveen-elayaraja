@@ -97,6 +97,8 @@
 
 <img src="assets/activity-graph.svg" alt="GitHub activity graph" />
 
+<sub>Profile metrics and language cards refresh automatically every 6 hours. The activity chart reflects recent public GitHub events, not the complete contribution calendar.</sub>
+
 </div>
 
 <div align="center">
