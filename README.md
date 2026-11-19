@@ -8,7 +8,7 @@
 <img src="https://raw.githubusercontent.com/naveen-elayaraja/naveen-elayaraja/main/assets/sleepy-smoker.gif?v=1" alt="Standing cartoon developer holding a laptop and cigarette, taking two puffs as messages appear, with eight rats running across the floor" width="100%" />
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=naveen-elayaraja&style=for-the-badge&color=blueviolet&label=PROFILE+VIEWS" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=naveen-elayaraja&style=for-the-badge&color=238636&label=PROFILE+VIEWS" alt="Profile views" />
   <img src="https://img.shields.io/github/followers/naveen-elayaraja?style=for-the-badge&logo=github&label=FOLLOWERS" alt="GitHub followers" />
   <img src="https://img.shields.io/github/stars/naveen-elayaraja/naveen-elayaraja?style=for-the-badge&logo=github&label=PROFILE+REPO+STARS" alt="Repository stars" />
 </p>
@@ -27,6 +27,18 @@
 ## `$ whoami`
 
 **Open source enthusiast**
+
+## 🌱 Open-source contributions
+
+<div align="center">
+
+| Project | Contribution | Status |
+|---|---|---|
+| [eYantra Task 3A](https://github.com/naveen-elayaraja/eYantra-Task-3A/pull/1) | Final Task 3B implementation | Merged |
+| [Universal Media Server](https://github.com/UniversalMediaServer/UniversalMediaServer/pull/6475) | Fixed Arabic language flag mapping and added a regression test | Merged |
+| [OWASP ZAP](https://github.com/zaproxy/zaproxy/pull/9558) | Corrected alert options label casing | Merged |
+
+</div>
 
 ## 🧰 My favorite tools and technologies
 
