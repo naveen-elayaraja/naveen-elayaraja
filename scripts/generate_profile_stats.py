@@ -10,6 +10,8 @@ USER = "naveen-elayaraja"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OUT = Path("assets")
 OUT.mkdir(exist_ok=True)
+REFRESHED_AT = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+REFRESH_LABEL = f"Updated {REFRESHED_AT}"
 HEADERS = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "profile-stats-generator"}
 if TOKEN:
     HEADERS["Authorization"] = f"Bearer {TOKEN}"
@@ -62,7 +64,7 @@ for i, (label, value) in enumerate(metrics):
     x = 24 + (i % 2) * 232
     y = 96 + (i // 2) * 52
     parts.append(f'<text x="{x}" y="{y}" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="11">{label}</text><text x="{x}" y="{y+25}" fill="#f0f6fc" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">{value}</text>')
-(OUT / "github-stats.svg").write_text(svg_card("GitHub overview", "Live public-account metrics · updated daily", "".join(parts), height=250), encoding="utf-8")
+(OUT / "github-stats.svg").write_text(svg_card("GitHub overview", f"Live public-account metrics · {REFRESH_LABEL}", "".join(parts), height=250), encoding="utf-8")
 
 # Refresh the animated dashboard's displayed values while preserving its SVG animations.
 dashboard_path = OUT / "github-dashboard.svg"
@@ -77,6 +79,8 @@ if dashboard_path.exists():
     }
     for placeholder, value in replacements.items():
         dashboard = dashboard.replace(placeholder, escape(value))
+    dashboard = dashboard.replace("LIVE PROFILE SNAPSHOT", escape(REFRESH_LABEL))
+    dashboard = dashboard.replace("Live data refreshed daily", escape(REFRESH_LABEL))
     dashboard_path.write_text(dashboard, encoding="utf-8")
 
 language_bytes = Counter()
@@ -99,7 +103,7 @@ for name, amount in top:
     y += 30
 if not top:
     lang_parts.append('<text x="24" y="100" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="13">Language data is not available yet.</text>')
-(OUT / "top-languages.svg").write_text(svg_card("Most used languages", "Calculated from language bytes across public, non-fork repositories", "".join(lang_parts), height=270), encoding="utf-8")
+(OUT / "top-languages.svg").write_text(svg_card("Most used languages", f"Calculated from public, non-fork repositories · {REFRESH_LABEL}", "".join(lang_parts), height=270), encoding="utf-8")
 
 # GitHub's public events feed gives a recent activity snapshot (not lifetime commits).
 events = get(f"https://api.github.com/users/{USER}/events/public?per_page=100")
@@ -125,5 +129,5 @@ for i, day in enumerate(days):
 bars.append(f'<text x="25" y="137" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">{days[0].strftime("%b %d")}</text>')
 bars.append(f'<text x="430" y="137" text-anchor="end" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">{today.strftime("%b %d")}</text>')
 bars.append('<text x="24" y="160" fill="#8b949e" font-family="Segoe UI,Arial,sans-serif" font-size="10">Recent public GitHub events · IST · not a complete contribution count</text>')
-(OUT / "activity-graph.svg").write_text(svg_card("Recent GitHub activity", "Daily public-event activity over the last 30 days", "".join(bars), width=495, height=180), encoding="utf-8")
+(OUT / "activity-graph.svg").write_text(svg_card("Recent GitHub activity", f"Daily public-event activity over the last 30 days · {REFRESH_LABEL}", "".join(bars), width=495, height=180), encoding="utf-8")
 print("Generated GitHub stats, language, and activity SVG cards.")
